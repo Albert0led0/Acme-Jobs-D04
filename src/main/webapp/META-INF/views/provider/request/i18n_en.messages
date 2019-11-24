@@ -1,0 +1,21 @@
+provider.request.form.label.title = Title:
+provider.request.form.label.moment = Moment:
+provider.request.form.label.deadline = Deadline:
+provider.request.form.label.description = Description:
+provider.request.form.label.reward = Reward:
+provider.request.form.label.ticker1 = Ticker:
+provider.request.form.label.ticker2 = Ticker: ('R' represents the letter R, 'X' any letter, '-'a dash and '9' any number)
+provider.request.form.button.checkbox = Accept (Requests cannot be modified or deleted, please check your request)
+provider.request.form.button.create = Create
+provider.request.form.button.return = Return
+
+provider.request.form.error.past-deadline		= The deadline must be in the future
+provider.request.form.error.timestamp			= The deadline must adhere to the following pattern: YYYY/MM/DD HH:mm
+provider.request.form.error.null-currency		= The amount and currency must be specified
+provider.request.error.must-accept 				= Must accept the creation of the request
+provider.request.form.error.duplicated-ticker   = This ticker is already in use
+
+provider.request.form.placeholder.deadline	= YYYY/MM/DD HH:mm
+provider.request.list.label.deadline = Deadline
+provider.request.list.label.moment = Moment
+provider.request.list.label.title = Title 

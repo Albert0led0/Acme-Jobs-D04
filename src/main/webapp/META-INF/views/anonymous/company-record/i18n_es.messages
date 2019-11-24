@@ -1,0 +1,19 @@
+# i18n_es.messages
+
+anonymous.company-record.form.label.company = Empresa:
+anonymous.company-record.form.label.sector = Sector:
+anonymous.company-record.form.label.ceoname = Nombre del CEO:
+anonymous.company-record.form.label.description = Descripción de las actividades:
+anonymous.company-record.form.label.website = Página web:
+anonymous.company-record.form.label.phone = Número de teléfono:
+anonymous.company-record.form.label.email = Email:
+anonymous.company-record.form.label.stars = Estrellas:
+
+anonymous.company-record.form.button.return = Volver
+
+anonymous.company-record.form.nostars = Esta empresa aún no ha sido valorada.
+
+anonymous.company-record.list.company = Empresa
+anonymous.company-record.list.sector = Sector
+anonymous.company-record.list.ceoname = Nombre del CEO
+anonymous.company-record.list.stars = Estrellas

@@ -1,0 +1,15 @@
+# i18n_en.messages
+
+anonymous.investor-record.form.label.investor = Investor:
+anonymous.investor-record.form.label.sector = Sector:
+anonymous.investor-record.form.label.statement = Investing Statement:
+anonymous.investor-record.form.label.stars = Stars:
+
+anonymous.investor-record.form.button.return = Return
+
+anonymous.investor-record.form.nostars = This investor record has not been rated yet.
+
+anonymous.investor-record.list.investor = Investor
+anonymous.investor-record.list.sector = Sector
+anonymous.investor-record.list.statement = Investing Statement
+anonymous.investor-record.list.stars = Stars

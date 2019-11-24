@@ -1,0 +1,19 @@
+# i18n_en.messages
+
+anonymous.company-record.form.label.company = Company:
+anonymous.company-record.form.label.sector = Sector:
+anonymous.company-record.form.label.ceoname = CEO's name:
+anonymous.company-record.form.label.description = Activities description:
+anonymous.company-record.form.label.website = Website:
+anonymous.company-record.form.label.phone = Phone number:
+anonymous.company-record.form.label.email = Email:
+anonymous.company-record.form.label.stars = Stars:
+
+anonymous.company-record.form.button.return = Return
+
+anonymous.company-record.form.nostars = This company has not been rated yet.
+
+anonymous.company-record.list.company = Company
+anonymous.company-record.list.sector = Sector
+anonymous.company-record.list.ceoname = CEO's Name
+anonymous.company-record.list.stars = Stars

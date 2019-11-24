@@ -1,0 +1,12 @@
+# i18n_es.messages
+
+anonymous.barba-bulletin.form.label.author = Autor:
+anonymous.barba-bulletin.form.label.text = Texto:
+anonymous.barba-bulletin.form.label.topic = Tema:
+anonymous.barba-bulletin.form.button.create = Crear!
+anonymous.barba-bulletin.form.button.return = Volver
+
+anonymous.barba-bulletin.list.label.moment = Momento
+anonymous.barba-bulletin.list.label.author = Autor
+anonymous.barba-bulletin.list.label.topic = Tema
+anonymous.barba-bulletin.list.label.text = Texto

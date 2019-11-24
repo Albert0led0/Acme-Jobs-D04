@@ -1,0 +1,25 @@
+consumer.offer.form.label.title 			= Título:
+consumer.offer.form.label.moment 			= Momento:
+consumer.offer.form.label.deadline 			= Fecha límite:
+consumer.offer.form.label.description 		= Descripción:
+consumer.offer.form.label.min-reward 		= Recompensa mínima:
+consumer.offer.form.label.max-reward 		= Recompensa máxima:
+consumer.offer.form.label.ticker1 			= Ticker:
+consumer.offer.form.label.ticker2 			= Ticker: ('O' representa la letra O, 'X' una letra cualquiera, '-' un guión y '9' un número cualquiera)
+
+consumer.offer.form.button.checkbox 		= Acepto (Las ofertas no se pueden ni eliminar ni modificar, revise su oferta)
+consumer.offer.form.button.create 			= Crear
+consumer.offer.form.button.return 			= Volver
+
+consumer.offer.form.error.deadline			= La fecha límite tiene que ser futura
+consumer.offer.form.error.timestamp			= La fecha límite tiene que seguir el patrón DD/MM/AAAA HH:mm
+consumer.offer.form.error.null-currency		= La cantidad y la divisa deben ser especificadas
+consumer.offer.form.error.rewards			= La recompensa máxima tiene que ser mayor o igual que la mínima
+consumer.offer.form.error.must-accept 		= Debe aceptar la creación de la oferta
+consumer.offer.form.error.duplicated-ticker = Este ticker ya está en uso
+
+consumer.offer.form.placeholder.deadline	= DD/MM/AAAA HH:mm
+
+consumer.offer.list.label.deadline 			= Fecha límite
+consumer.offer.list.label.moment 			= Momento
+consumer.offer.list.label.title 			= Título

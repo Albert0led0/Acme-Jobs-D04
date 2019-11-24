@@ -1,0 +1,16 @@
+# i18n_en.messages
+
+authenticated.challenge.form.label.title = Title:
+authenticated.challenge.form.label.deadline = Deadline:
+authenticated.challenge.form.label.description = Description:
+authenticated.challenge.form.label.gold = Gold goal reward:
+authenticated.challenge.form.label.silver = Silver goal reward:
+authenticated.challenge.form.label.bronze = Bronze goal reward:
+
+authenticated.challenge.form.button.return = Return
+
+authenticated.challenge.list.title = Title
+authenticated.challenge.list.deadline = Deadline
+authenticated.challenge.list.description = Description
+
+

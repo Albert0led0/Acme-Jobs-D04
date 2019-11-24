@@ -1,0 +1,22 @@
+provider.request.form.label.title = Título:
+provider.request.form.label.moment = Momento:
+provider.request.form.label.deadline = Fecha límite:
+provider.request.form.label.description = Descripción:
+provider.request.form.label.reward = Recompensa:
+provider.request.form.label.ticker1 = Ticker:
+provider.request.form.label.ticker2 = Ticker: ('R' representa la letra R, 'X' una letra cualquiera, '-' un guión y '9' un número cualquiera)
+provider.request.form.button.checkbox = Acepto (Los pedidos no se pueden ni eliminar ni modificar, revise su pedido)
+provider.request.form.button.create = Crear
+provider.request.form.button.return = Volver
+
+provider.request.form.error.deadline			= La fecha límite tiene que ser futura
+provider.request.form.error.timestamp			= La fecha límite tiene que seguir el patrón DD/MM/AAAA HH:mm
+provider.request.form.error.null-currency		= La cantidad y la divisa deben ser especificadas
+provider.request.form.error.must-accept 		= Debe aceptar la creación del pedido
+provider.request.form.error.duplicated-ticker 	= Este ticker ya está en uso
+
+provider.request.form.placeholder.deadline	= DD/MM/AAAA HH:mm
+
+provider.request.list.label.deadline = Fecha límite
+provider.request.list.label.moment = Momento
+provider.request.list.label.title = Título

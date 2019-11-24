@@ -1,0 +1,23 @@
+# i18n_en.messages
+
+authenticated.company-record.form.label.company = Company:
+authenticated.company-record.form.label.incorporated = Incorporated company
+authenticated.company-record.form.label.sector = Sector:
+authenticated.company-record.form.label.ceoname = CEO's name:
+authenticated.company-record.form.label.description = Activities description:
+authenticated.company-record.form.label.website = Website:
+authenticated.company-record.form.label.phone = Phone number:
+authenticated.company-record.form.label.email = Email:
+authenticated.company-record.form.label.stars = Stars:
+
+authenticated.company-record.form.button.return = Return
+administrator.company-record.form.button.update = Update
+administrator.company-record.form.button.delete = Delete
+administrator.company-record.form.button.create = Create
+
+authenticated.company-record.form.nostars = This company has not been rated yet.
+
+administrator.company-record.list.company = Company
+administrator.company-record.list.sector = Sector
+administrator.company-record.list.ceoname = CEO's Name
+administrator.company-record.list.stars = Stars

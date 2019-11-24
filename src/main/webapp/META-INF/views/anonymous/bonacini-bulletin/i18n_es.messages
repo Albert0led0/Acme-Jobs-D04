@@ -1,0 +1,12 @@
+# i18n_en.messages
+
+anonymous.bonacini-bulletin.list.moment = Moment
+anonymous.bonacini-bulletin.list.author = Author
+anonymous.bonacini-bulletin.list.city = City
+anonymous.bonacini-bulletin.list.text = Text
+
+anonymous.bonacini-bulletin.form.label.author = Autor:
+anonymous.bonacini-bulletin.form.label.text = Texto:
+anonymous.bonacini-bulletin.form.label.city = Ciudad:
+anonymous.bonacini-bulletin.form.button.create = Crear
+anonymous.bonacini-bulletin.form.button.return = Volver

@@ -1,0 +1,23 @@
+# i18n_en.messages
+
+#-------------------- Investor Record list.jsp -------------------------
+
+administrator.investor-record.list.investor = Investor
+administrator.investor-record.list.sector = Sector
+administrator.investor-record.list.statement = Investing Statement
+administrator.investor-record.list.stars = Stars
+
+#-------------------- Investor Record form.jsp ----------------------------
+
+administrator.investor-record.form.label.investor = Investor:
+administrator.investor-record.form.label.sector = Sector:
+administrator.investor-record.form.label.statement = Investing Statement:
+administrator.investor-record.form.label.stars = Stars:
+
+administrator.investor-record.form.button.return = Return
+
+administrator.investor-record.form.nostars = This investor record has not been rated yet.
+
+administrator.investor-record.form.button.update = Update
+administrator.investor-record.form.button.delete = Delete
+administrator.investor-record.form.button.create = Create

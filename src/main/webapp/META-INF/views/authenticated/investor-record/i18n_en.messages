@@ -1,0 +1,15 @@
+# i18n_en.messages
+
+authenticated.investor-record.form.label.investor = Investor:
+authenticated.investor-record.form.label.sector = Sector:
+authenticated.investor-record.form.label.statement = Investing Statement:
+authenticated.investor-record.form.label.stars = Stars:
+
+authenticated.investor-record.form.button.return = Return
+
+authenticated.investor-record.form.nostars = This investor record has not been rated yet.
+
+authenticated.investor-record.list.investor = Investor
+authenticated.investor-record.list.sector = Sector
+authenticated.investor-record.list.statement = Investing Statement
+authenticated.investor-record.list.stars = Stars

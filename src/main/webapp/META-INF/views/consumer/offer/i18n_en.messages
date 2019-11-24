@@ -1,0 +1,25 @@
+consumer.offer.form.label.title 			= Title:
+consumer.offer.form.label.moment 			= Moment:
+consumer.offer.form.label.deadline 			= Deadline:
+consumer.offer.form.label.description 		= Description:
+consumer.offer.form.label.min-reward 		= Minimum reward:
+consumer.offer.form.label.max-reward 		= Maximum reward:
+consumer.offer.form.label.ticker1 			= Ticker:
+consumer.offer.form.label.ticker2 			= Ticker: ('O' represents the letter O, 'X' any letter, '-' a dash and '9' any number)
+
+consumer.offer.form.button.checkbox 		= Accept (Offers cannot be modified or deleted, please check your offer)
+consumer.offer.form.button.create 			= Create
+consumer.offer.form.button.return 			= Return
+
+consumer.offer.form.error.past-deadline		= The deadline must be in the future
+consumer.offer.form.error.timestamp			= The deadline must adhere to the following pattern: YYYY/MM/DD HH:mm
+consumer.offer.form.error.null-currency		= The amount and currency must be specified
+consumer.offer.form.error.rewards			= The maximum reward but be greater than or equal to the minimum
+consumer.offer.form.error.must-accept 		= Must accept the creation of the offer
+consumer.offer.form.error.duplicated-ticker = This ticker is already in use
+
+consumer.offer.form.placeholder.deadline	= YYYY/MM/DD HH:mm
+
+consumer.offer.list.label.deadline 			= Deadline
+consumer.offer.list.label.moment 			= Moment
+consumer.offer.list.label.title 			= Title 

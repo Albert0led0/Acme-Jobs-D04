@@ -1,0 +1,19 @@
+# i18n_es.messages
+
+authenticated.company-record.form.label.company = Empresa:
+authenticated.company-record.form.label.sector = Sector:
+authenticated.company-record.form.label.ceoname = Nombre del CEO:
+authenticated.company-record.form.label.description = Descripción de las actividades:
+authenticated.company-record.form.label.website = Página web:
+authenticated.company-record.form.label.phone = Número de teléfono:
+authenticated.company-record.form.label.email = Email:
+authenticated.company-record.form.label.stars = Estrellas:
+
+authenticated.company-record.form.button.return = Volver
+
+authenticated.company-record.form.nostars = Esta empresa aún no ha sido valorada.
+
+authenticated.company-record.list.company = Empresa
+authenticated.company-record.list.sector = Sector
+authenticated.company-record.list.ceoname = Nombre del CEO
+authenticated.company-record.list.stars = Estrellas

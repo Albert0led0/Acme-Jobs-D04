@@ -1,0 +1,23 @@
+# i18n_es.messages
+
+#-------------------- Investor Record list.jsp -------------------------
+
+administrator.investor-record.list.investor = Inversor
+administrator.investor-record.list.sector = Sector
+administrator.investor-record.list.statement = Declaración de inversión
+administrator.investor-record.list.stars = Estrellas
+
+#-------------------- Investor Record form.jsp ----------------------------
+
+administrator.investor-record.form.label.investor = Inversor:
+administrator.investor-record.form.label.sector = Sector:
+administrator.investor-record.form.label.statement = Declaración de inversión:
+administrator.investor-record.form.label.stars = Estrellas:
+
+administrator.investor-record.form.button.return = Volver
+
+administrator.investor-record.form.nostars = Esta inversión aún no ha sido valorada.
+
+administrator.investor-record.form.button.update = Actualizar
+administrator.investor-record.form.button.delete = Borrar
+administrator.investor-record.form.button.create = Crear

@@ -1,0 +1,27 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.dashboard.form.title = Dashboard
+
+administrator.dashboard.form.table.cell.number-announcements		= 	Number of announcements
+administrator.dashboard.form.table.cell.number-companies	 		= 	Number of companies
+administrator.dashboard.form.table.cell.number-investors	 		= 	Number of investors
+
+administrator.dashboard.form.table.cell.stats.min					= 	Minimum
+administrator.dashboard.form.table.cell.stats.max					=	Maximum
+administrator.dashboard.form.table.cell.stats.avg					=	Average
+administrator.dashboard.form.table.cell.stats.stddev				=	Standard deviation
+
+administrator.dashboard.form.table.title.rewards-active-requests	=	Rewards of the active requests
+administrator.dashboard.form.table.title.min-rewards-active-offers	=	Minimum reward of the active requests
+administrator.dashboard.form.table.title.max-rewards-active-offers	=	Maximum reward of the active requests
+
+administrator.dashboard.form.chart.title.companies-by-sector		=	Number of companies by sector
+administrator.dashboard.form.chart.title.investors-by-sector		=	Number of investors by sector

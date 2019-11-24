@@ -1,0 +1,15 @@
+# i18n_es.messages
+
+authenticated.investor-record.form.label.investor = Inversor:
+authenticated.investor-record.form.label.sector = Sector:
+authenticated.investor-record.form.label.statement = Declaración de inversión:
+authenticated.investor-record.form.label.stars = Estrellas:
+
+authenticated.investor-record.form.button.return = Volver
+
+authenticated.investor-record.form.nostars = Esta inversión aún no ha sido valorada.
+
+authenticated.investor-record.list.investor = Inversor
+authenticated.investor-record.list.sector = Sector
+authenticated.investor-record.list.statement = Declaración de inversión
+authenticated.investor-record.list.stars = Estrellas

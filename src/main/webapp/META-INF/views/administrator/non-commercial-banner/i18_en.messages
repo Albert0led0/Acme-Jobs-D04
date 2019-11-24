@@ -1,0 +1,23 @@
+#i18_en.messages
+
+# ---------------------------- NonCommercialBanner list.jsp ------------------------------------
+
+
+administrator.non-commercial-banner.list.label.picture-url = Picture URL
+administrator.non-commercial-banner.list.label.slogan = Slogan
+administrator.non-commercial-banner.list.label.target-url = Target URL
+
+
+# ---------------------------- NonCommercialBanner form.jsp ------------------------------------
+
+
+administrator.non-commercial-banner.form.label.picture-url = Picture URL:
+administrator.non-commercial-banner.form.label.slogan = Slogan:
+administrator.non-commercial-banner.form.label.target-url = Target URL:
+administrator.non-commercial-banner.form.label.jingle = Jingle:
+
+administrator.non-commercial-banner.form.button.return = Return
+
+administrator.non-commercial-banner.form.button.delete = Delete
+administrator.non-commercial-banner.form.button.update = Update
+administrator.non-commercial-banner.form.button.create = Create
