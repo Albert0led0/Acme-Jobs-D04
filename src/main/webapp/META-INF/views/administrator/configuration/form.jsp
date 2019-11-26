@@ -18,7 +18,7 @@
 <acme:form>
 	<acme:form-textbox code="administrator.configuration.form.label.spamwords" path="spamwords"/>
 	<acme:form-double code="administrator.configuration.form.label.spamthreshold" path="spamThreshold"/>
-	<acme:form-textbox code="administrator.configuration.form.label.language" path="language"/>
+	<acme:form-textbox code="administrator.configuration.form.label.language" path="language" readonly="true"/>
 	
 	<acme:form-submit test="${command == 'show'}"
 		code="administrator.configuration.form.button.update"
