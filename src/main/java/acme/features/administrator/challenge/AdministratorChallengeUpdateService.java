@@ -68,23 +68,37 @@ public class AdministratorChallengeUpdateService implements AbstractUpdateServic
 		assert errors != null;
 
 		Boolean deadlineAux = true;
+		Boolean nullGSRewards = false;
+		Boolean nullSBRewards = false;
 		Date now = new Date(System.currentTimeMillis());
 
 		try {
 			entity.getGoldReward().getCurrency();
 		} catch (NullPointerException e) {
 			errors.state(request, false, "goldReward", "administrator.challenge.form.error.null-currency");
+			nullGSRewards = true;
 		}
 		try {
 			entity.getSilverReward().getCurrency();
 		} catch (NullPointerException e) {
 			errors.state(request, false, "silverReward", "administrator.challenge.form.error.null-currency");
+			nullGSRewards = true;
+			nullSBRewards = true;
 		}
 		try {
 			entity.getBronzeReward().getCurrency();
 		} catch (NullPointerException e) {
 			errors.state(request, false, "bronzeReward", "administrator.challenge.form.error.null-currency");
+			nullSBRewards = true;
 		}
+
+		if (!nullGSRewards) {
+			errors.state(request, entity.getGoldReward().getAmount().doubleValue() >= entity.getSilverReward().getAmount().doubleValue(), "goldReward", "administrator.challenge.form.error.gold-reward");
+		}
+		if (!nullSBRewards) {
+			errors.state(request, entity.getSilverReward().getAmount().doubleValue() >= entity.getBronzeReward().getAmount().doubleValue(), "silverReward", "administrator.challenge.form.error.silver-reward");
+		}
+
 		try {
 			assert entity.getDeadline() != null;
 			if (deadlineAux) {
