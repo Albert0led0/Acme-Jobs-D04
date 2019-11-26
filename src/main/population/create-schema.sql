@@ -1,5 +1,4 @@
 
-
     create table `administrator` (
        `id` integer not null,
         `version` integer not null,
@@ -51,12 +50,106 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `challenge` (
+       `id` integer not null,
+        `version` integer not null,
+        `bronze_reward_amount` double precision,
+        `bronze_reward_currency` varchar(255),
+        `deadline` datetime(6),
+        `description` varchar(255),
+        `gold_reward_amount` double precision,
+        `gold_reward_currency` varchar(255),
+        `silver_reward_amount` double precision,
+        `silver_reward_currency` varchar(255),
+        `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `commercial_banner` (
+       `id` integer not null,
+        `version` integer not null,
+        `pictureurl` varchar(255),
+        `slogan` varchar(255),
+        `targeturl` varchar(255),
+        `credit_card` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `company_record` (
+       `id` integer not null,
+        `version` integer not null,
+        `ceo_name` varchar(255),
+        `company` varchar(255),
+        `description` varchar(255),
+        `email` varchar(255),
+        `incorporated` bit not null,
+        `phone_number` varchar(255),
+        `sector` varchar(255),
+        `stars` double precision,
+        `web_site` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `configuration` (
+       `id` integer not null,
+        `version` integer not null,
+        `language` varchar(255),
+        `spam_threshold` double precision not null,
+        `spamwords` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `consumer` (
        `id` integer not null,
         `version` integer not null,
         `user_account_id` integer,
         `company` varchar(255),
         `sector` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `employer` (
+       `id` integer not null,
+        `version` integer not null,
+        `user_account_id` integer,
+        `activity_sector` varchar(255),
+        `company_name` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `investor_record` (
+       `id` integer not null,
+        `version` integer not null,
+        `investing_statement_amount` double precision,
+        `investing_statement_currency` varchar(255),
+        `investor_name` varchar(255),
+        `sector` varchar(255),
+        `stars` double precision,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `non_commercial_banner` (
+       `id` integer not null,
+        `version` integer not null,
+        `pictureurl` varchar(255),
+        `slogan` varchar(255),
+        `targeturl` varchar(255),
+        `jingle` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `offer` (
+       `id` integer not null,
+        `version` integer not null,
+        `deadline` datetime(6),
+        `description` varchar(255),
+        `max_reward_amount` double precision,
+        `max_reward_currency` varchar(255),
+        `min_reward_amount` double precision,
+        `min_reward_currency` varchar(255),
+        `moment` datetime(6),
+        `ticker` varchar(255),
+        `title` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -85,7 +178,8 @@
         `deadline` datetime(6),
         `description` varchar(255),
         `moment` datetime(6),
-        `reward` double precision not null,
+        `reward_amount` double precision,
+        `reward_currency` varchar(255),
         `ticker` varchar(255),
         `title` varchar(255),
         primary key (`id`)
@@ -113,11 +207,23 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `worker` (
+       `id` integer not null,
+        `version` integer not null,
+        `user_account_id` integer,
+        `qualifications_record` varchar(255),
+        `skills_record` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `hibernate_sequence` (
        `next_val` bigint
     ) engine=InnoDB;
 
     insert into `hibernate_sequence` values ( 1 );
+
+    alter table `offer` 
+       add constraint UK_iex7e8fs0fh89yxpcnm1orjkm unique (`ticker`);
 
     alter table `request` 
        add constraint UK_9mxq3powq8tqctclj0fbi2nih unique (`ticker`);
@@ -145,7 +251,17 @@
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
+    alter table `employer` 
+       add constraint FK_na4dfobmeuxkwf6p75abmb2tr 
+       foreign key (`user_account_id`) 
+       references `user_account` (`id`);
+
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
+       foreign key (`user_account_id`) 
+       references `user_account` (`id`);
+
+    alter table `worker` 
+       add constraint FK_l5q1f33vs2drypmbdhpdgwfv3 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);

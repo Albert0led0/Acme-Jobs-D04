@@ -15,9 +15,17 @@
        drop 
        foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
 
+    alter table `employer` 
+       drop 
+       foreign key FK_na4dfobmeuxkwf6p75abmb2tr;
+
     alter table `provider` 
        drop 
        foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
+
+    alter table `worker` 
+       drop 
+       foreign key FK_l5q1f33vs2drypmbdhpdgwfv3;
 
     drop table if exists `administrator`;
 
@@ -31,7 +39,23 @@
 
     drop table if exists `bonacini_bulletin`;
 
+    drop table if exists `challenge`;
+
+    drop table if exists `commercial_banner`;
+
+    drop table if exists `company_record`;
+
+    drop table if exists `configuration`;
+
     drop table if exists `consumer`;
+
+    drop table if exists `employer`;
+
+    drop table if exists `investor_record`;
+
+    drop table if exists `non_commercial_banner`;
+
+    drop table if exists `offer`;
 
     drop table if exists `paton_bulletin`;
 
@@ -42,5 +66,7 @@
     drop table if exists `toledo_bulletin`;
 
     drop table if exists `user_account`;
+
+    drop table if exists `worker`;
 
     drop table if exists `hibernate_sequence`;
