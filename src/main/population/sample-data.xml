@@ -16,6 +16,68 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<import resource="conversion-service.xml" />
+	
+	<!-- Employer -->
+	
+	<bean name="employerUserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="employer" />
+		<property name="password" value="employer" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Employer" />
+				<property name="surname" value="Acme" />
+				<property name="email" value="employer@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="employerEmployer" />
+				<ref bean="employerAuthenticated" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="employerEmployer" class="acme.entities.roles.Employer">
+		<property name="userAccount" ref="employerUserAccount" />
+		<property name="companyName" value="AcmeEmployer01" />
+		<property name="activitySector" value="Informática" />
+	</bean>
+	
+	<bean name="employerAuthenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="employerUserAccount" />
+	</bean>
+	
+	<!-- Worker -->
+	
+	<bean name="workerUserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="worker" />
+		<property name="password" value="worker" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Worker" />
+				<property name="surname" value="Acme" />
+				<property name="email" value="worker@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="workerWorker" />
+				<ref bean="workerAuthenticated" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="workerWorker" class="acme.entities.roles.Worker">
+		<property name="userAccount" ref="workerUserAccount" />
+		<property name="qualificationsRecord" value="Bachillerato, Nivel B1 Inglés." />
+		<property name="skillsRecord" value="Buena organización y trabajo en grupo." />
+	</bean>
+	
+	<bean name="workerAuthenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="workerUserAccount" />
+	</bean>
 
 	<!-- BonaciniBulletins -->
 	
