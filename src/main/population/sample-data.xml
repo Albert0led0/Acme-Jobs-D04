@@ -476,4 +476,156 @@
 		<property name="amount" value="10.5" />
 		<property name="currency" value="€" />
 	</bean>
+	
+	<bean id="MoneySalary01" class="acme.framework.datatypes.Money">
+		<property name="amount" value="850.0" />
+		<property name="currency" value="€" />
+	</bean>
+	
+	<bean id="MoneySalary02" class="acme.framework.datatypes.Money">
+		<property name="amount" value="1300.0" />
+		<property name="currency" value="€" />
+	</bean>
+	
+	<bean id="MoneySalary03" class="acme.framework.datatypes.Money">
+		<property name="amount" value="2100.0" />
+		<property name="currency" value="€" />
+	</bean>
+	
+	<bean id="MoneySalary04" class="acme.framework.datatypes.Money">
+		<property name="amount" value="780.0" />
+		<property name="currency" value="€" />
+	</bean>
+	
+	<!-- Jobs -->
+	
+	<bean id="Job01" class="acme.entities.jobs.Job">
+		<property name="referenceNumber" value="ref-job01" />
+		<property name="title" value="Job01" />
+		<property name="deadline" value="2026/04/04 12:00"/>
+		<property name="salary">
+			<ref bean="MoneySalary01" />
+		</property>
+		<property name="link"><null/></property>
+		<property name="draft" value="true" />
+		<property name="employer" ref="employerEmployer" />
+		<property name="descriptor" ref="Descriptor01"/>
+	</bean>
+	
+	<bean id="Job02" class="acme.entities.jobs.Job">
+		<property name="referenceNumber" value="ref-job02" />
+		<property name="title" value="Job02" />
+		<property name="deadline" value="2022/04/04 12:00"/>
+		<property name="salary">
+			<ref bean="MoneySalary02" />
+		</property>
+		<property name="link"><null/></property>
+		<property name="draft" value="false" />
+		<property name="employer" ref="employerEmployer" />
+		<property name="descriptor" ref="Descriptor02"/>
+	</bean>
+	
+	<bean id="Job03" class="acme.entities.jobs.Job">
+		<property name="referenceNumber" value="ref-job03" />
+		<property name="title" value="Job03" />
+		<property name="deadline" value="2015/04/04 12:00"/>
+		<property name="salary">
+			<ref bean="MoneySalary03" />
+		</property>
+		<property name="link"><null/></property>
+		<property name="draft" value="false" />
+		<property name="employer" ref="employerEmployer" />
+		<property name="descriptor" ref="Descriptor03"/>
+	</bean>
+	
+	<bean id="Job04" class="acme.entities.jobs.Job">
+		<property name="referenceNumber" value="ref-job04" />
+		<property name="title" value="Job04" />
+		<property name="deadline" value="2023/03/01 12:00"/>
+		<property name="salary">
+			<ref bean="MoneySalary04" />
+		</property>
+		<property name="link"><null/></property>
+		<property name="draft" value="false" />
+		<property name="employer" ref="employerEmployer" />
+		<property name="descriptor" ref="Descriptor04"/>
+	</bean>
+	
+	<!-- Descriptors -->
+	
+	<bean id="Descriptor01" class="acme.entities.descriptors.Descriptor">
+		<property name="jobDescription" value="Esto es la descripción del trabajo 01" />
+	</bean>
+	
+	<bean id="Descriptor02" class="acme.entities.descriptors.Descriptor">
+		<property name="jobDescription" value="Esto es la descripción del trabajo 02" />
+	</bean>
+	
+	<bean id="Descriptor03" class="acme.entities.descriptors.Descriptor">
+		<property name="jobDescription" value="Esto es la descripción del trabajo 03" />
+	</bean>
+	
+	<bean id="Descriptor04" class="acme.entities.descriptors.Descriptor">
+		<property name="jobDescription" value="Esto es la descripción del trabajo 04" />
+	</bean>
+	
+	<!-- Duties -->
+	
+	<bean id="Duty01" class="acme.entities.duties.Duty">
+		<property name="title" value="Título01" />
+		<property name="description" value="Descripción01" />
+		<property name="timePercentage" value="0.1" />
+		<property name="descriptor" ref="Descriptor01"/>
+	</bean>
+
+	<bean id="Duty02" class="acme.entities.duties.Duty">
+		<property name="title" value="Título02" />
+		<property name="description" value="Descripción02" />
+		<property name="timePercentage" value="0.2" />
+		<property name="descriptor" ref="Descriptor01"/>
+	</bean>
+	
+	<bean id="Duty03" class="acme.entities.duties.Duty">
+		<property name="title" value="Título03" />
+		<property name="description" value="Descripción03" />
+		<property name="timePercentage" value="0.3" />
+		<property name="descriptor" ref="Descriptor02"/>
+	</bean>
+	
+	<bean id="Duty04" class="acme.entities.duties.Duty">
+		<property name="title" value="Título04" />
+		<property name="description" value="Descripción04" />
+		<property name="timePercentage" value="0.4" />
+		<property name="descriptor" ref="Descriptor02"/>
+	</bean>
+	
+	<bean id="Duty05" class="acme.entities.duties.Duty">
+		<property name="title" value="Título05" />
+		<property name="description" value="Descripción05" />
+		<property name="timePercentage" value="0.5" />
+		<property name="descriptor" ref="Descriptor03"/>
+	</bean>
+
+	<bean id="Duty06" class="acme.entities.duties.Duty">
+		<property name="title" value="Título06" />
+		<property name="description" value="Descripción06" />
+		<property name="timePercentage" value="0.6" />
+		<property name="descriptor" ref="Descriptor03"/>
+	</bean>
+	
+	<bean id="Duty07" class="acme.entities.duties.Duty">
+		<property name="title" value="Título07" />
+		<property name="description" value="Descripción07" />
+		<property name="timePercentage" value="0.7" />
+		<property name="descriptor" ref="Descriptor04"/>
+	</bean>
+	
+	<bean id="Duty08" class="acme.entities.duties.Duty">
+		<property name="title" value="Título08" />
+		<property name="description" value="Descripción08" />
+		<property name="timePercentage" value="0.8" />
+		<property name="descriptor" ref="Descriptor04"/>
+	</bean>
+	
+	
 </beans>

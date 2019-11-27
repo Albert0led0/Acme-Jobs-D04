@@ -779,7 +779,7 @@ Job
 + title: String{NotBlank}
 + deadline: Date{Temporal(TIMESTAMP)}
 + salary: Money
-+ link: String{NotBlank, URL}
++ link: String{URL}
 + draft: boolean
 + /active: boolean{Transient}</panel_attributes>
     <additional_attributes/>
