@@ -63,7 +63,7 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 		assert entity != null;
 		assert errors != null;
 
-		Boolean deadlineAux = true;
+		Boolean validDeadline = true;
 		Boolean nullGSRewards = false;
 		Boolean nullSBRewards = false;
 		Date now = new Date(System.currentTimeMillis());
@@ -97,13 +97,12 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 
 		try {
 			assert entity.getDeadline() != null;
-			if (deadlineAux) {
-				throw new RuntimeException();
-			}
 		} catch (AssertionError e1) {
-			deadlineAux = false;
+			validDeadline = false;
 			errors.state(request, false, "deadline", "administrator.challenge.form.error.timestamp");
-		} catch (RuntimeException e2) {
+		}
+
+		if (validDeadline) {
 			errors.state(request, entity.getDeadline().after(now), "deadline", "administrator.challenge.form.error.past-deadline");
 		}
 
