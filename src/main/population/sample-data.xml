@@ -498,7 +498,7 @@
 	</bean>
 	
 	<!-- Jobs -->
-	
+	<!-- !active job -->
 	<bean id="Job01" class="acme.entities.jobs.Job">
 		<property name="referenceNumber" value="ref-job01" />
 		<property name="title" value="Job01" />
@@ -511,7 +511,7 @@
 		<property name="employer" ref="employerEmployer" />
 		<property name="description" value="Esto es la descripción del trabajo 01" />
 	</bean>
-	
+	<!-- active job -->
 	<bean id="Job02" class="acme.entities.jobs.Job">
 		<property name="referenceNumber" value="ref-job02" />
 		<property name="title" value="Job02" />
@@ -524,7 +524,7 @@
 		<property name="employer" ref="employerEmployer" />
 		<property name="description" value="Esto es la descripción del trabajo 02" />
 	</bean>
-	
+	<!-- !active job -->
 	<bean id="Job03" class="acme.entities.jobs.Job">
 		<property name="referenceNumber" value="ref-job03" />
 		<property name="title" value="Job03" />
@@ -537,7 +537,7 @@
 		<property name="employer" ref="employerEmployer" />
 		<property name="description" value="Esto es la descripción del trabajo 03" />
 	</bean>
-	
+	<!-- active job -->
 	<bean id="Job04" class="acme.entities.jobs.Job">
 		<property name="referenceNumber" value="ref-job04" />
 		<property name="title" value="Job04" />
@@ -607,6 +607,52 @@
 		<property name="description" value="Descripción08" />
 		<property name="timePercentage" value="0.8" />
 		<property name="job" ref="Job04"/>
+	</bean>
+	
+	<!-- Applications -->
+	
+	<bean id="Application01" class="acme.entities.applications.Application">
+		<property name="referenceNumber" value="ref-app01" />
+		<property name="moment" value="2019/11/28 19:05" />
+		<property name="status" value="pending" />
+		<property name="statement" value="Por favor, contratadme 01" />
+		<property name="skills" value="Skill01, Skill02, Skill03" />
+		<property name="qualifications" value="Qualification01, Qualification02, Qualification03" />
+		<property name="worker" ref="workerWorker" />
+		<property name="job" ref="Job02" />
+	</bean>
+	
+	<bean id="Application02" class="acme.entities.applications.Application">
+		<property name="referenceNumber" value="ref-app02" />
+		<property name="moment" value="2019/11/28 19:12" />
+		<property name="status" value="pending" />
+		<property name="statement" value="Por favor, contratadme 02" />
+		<property name="skills" value="Skill01, Skill02, Skill03" />
+		<property name="qualifications" value="Qualification01, Qualification02, Qualification03, Qualification04" />
+		<property name="worker" ref="workerWorker" />
+		<property name="job" ref="Job02" />
+	</bean>
+	
+	<bean id="Application03" class="acme.entities.applications.Application">
+		<property name="referenceNumber" value="ref-app03" />
+		<property name="moment" value="2019/11/28 19:13" />
+		<property name="status" value="rejected" />
+		<property name="statement" value="Por favor, contratadme 03" />
+		<property name="skills" value="Skill01, Skill02, Skill03" />
+		<property name="qualifications" value="Qualification01, Qualification02, Qualification03" />
+		<property name="worker" ref="workerWorker" />
+		<property name="job" ref="Job04" />
+	</bean>
+	
+	<bean id="Application04" class="acme.entities.applications.Application">
+		<property name="referenceNumber" value="ref-app04" />
+		<property name="moment" value="2019/11/28 19:15" />
+		<property name="status" value="accepted" />
+		<property name="statement" value="Por favor, contratadme 04" />
+		<property name="skills" value="Skill01, Skill02, Skill03" />
+		<property name="qualifications" value="Qualification01, Qualification02, Qualification03, Qualification04" />
+		<property name="worker" ref="workerWorker" />
+		<property name="job" ref="Job04" />
 	</bean>
 	
 	
