@@ -6,7 +6,6 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
@@ -17,7 +16,6 @@ import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.URL;
 
-import acme.entities.descriptors.Descriptor;
 import acme.entities.roles.Employer;
 import acme.framework.datatypes.Money;
 import acme.framework.entities.DomainEntity;
@@ -52,6 +50,9 @@ public class Job extends DomainEntity {
 
 	private boolean				draft;
 
+	@NotBlank
+	private String				description;
+
 
 	//derivados
 
@@ -80,10 +81,5 @@ public class Job extends DomainEntity {
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private Employer	employer;
-
-	@NotNull
-	@Valid
-	@OneToOne(optional = false)
-	private Descriptor	descriptor;
+	private Employer employer;
 }

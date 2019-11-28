@@ -768,8 +768,8 @@ Worker
     <coordinates>
       <x>1053</x>
       <y>792</y>
-      <w>468</w>
-      <h>162</h>
+      <w>477</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Job
@@ -781,7 +781,8 @@ Job
 + salary: Money
 + link: String{URL}
 + draft: boolean
-+ /active: boolean{Transient}</panel_attributes>
++ /active: boolean{Transient}
++ description: String{NotBlank}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -802,7 +803,7 @@ publishes v</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>1197</x>
-      <y>1179</y>
+      <y>1053</y>
       <w>234</w>
       <h>99</h>
     </coordinates>
@@ -818,42 +819,14 @@ Duty
     <id>Relation</id>
     <coordinates>
       <x>1296</x>
-      <y>1098</y>
+      <y>963</y>
       <w>90</w>
-      <h>99</h>
+      <h>108</h>
     </coordinates>
     <panel_attributes>lt=&lt;-x
 m1=1
 m2=1..*
-includes &gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1206</x>
-      <y>1035</y>
-      <w>207</w>
-      <h>72</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Descriptor
---
-+ jobDescription: String{NotBlank}</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1296</x>
-      <y>945</y>
-      <w>90</w>
-      <h>108</h>
-    </coordinates>
-    <panel_attributes>lt=x-&gt;
-m1=1
-m2=1
-&lt; describes</panel_attributes>
+includes v</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
   </element>
   <element>
@@ -883,7 +856,7 @@ Application
       <w>81</w>
       <h>387</h>
     </coordinates>
-    <panel_attributes>lt=&lt;-&gt;
+    <panel_attributes>lt=&lt;-x
 m1=1
 m2=0..*
 makes &gt;</panel_attributes>
@@ -892,16 +865,16 @@ makes &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1512</x>
+      <x>1521</x>
       <y>900</y>
-      <w>126</w>
+      <w>117</w>
       <h>45</h>
     </coordinates>
     <panel_attributes>lt=x-&gt;
 m1=0..*
 m2=1
 &lt; applies for</panel_attributes>
-    <additional_attributes>120.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>110.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
@@ -1017,7 +990,7 @@ AuditRecord
       <w>108</w>
       <h>126</h>
     </coordinates>
-    <panel_attributes>lt=&lt;-&gt;
+    <panel_attributes>lt=&lt;-x
 m1=1
 m2=0..*
 writes &gt;</panel_attributes>
@@ -1026,16 +999,16 @@ writes &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1512</x>
+      <x>1521</x>
       <y>747</y>
-      <w>279</w>
+      <w>270</w>
       <h>117</h>
     </coordinates>
     <panel_attributes>lt=x-&gt;
 m1=0..*
 m2=1
 &lt; regarding</panel_attributes>
-    <additional_attributes>220.0;10.0;220.0;100.0;10.0;100.0</additional_attributes>
+    <additional_attributes>210.0;10.0;210.0;100.0;10.0;100.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -1106,7 +1079,7 @@ bg=blue</panel_attributes>
     <id>UMLNote</id>
     <coordinates>
       <x>918</x>
-      <y>972</y>
+      <y>981</y>
       <w>252</w>
       <h>63</h>
     </coordinates>
@@ -1139,23 +1112,23 @@ bg=blue</panel_attributes>
       <x>1008</x>
       <y>846</y>
       <w>63</w>
-      <h>144</h>
+      <h>153</h>
     </coordinates>
     <panel_attributes>lt=..
 </panel_attributes>
-    <additional_attributes>50.0;10.0;10.0;140.0</additional_attributes>
+    <additional_attributes>50.0;10.0;10.0;150.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>1152</x>
-      <y>945</y>
+      <y>963</y>
       <w>54</w>
-      <h>225</h>
+      <h>207</h>
     </coordinates>
     <panel_attributes>lt=..
 </panel_attributes>
-    <additional_attributes>40.0;10.0;10.0;230.0</additional_attributes>
+    <additional_attributes>40.0;10.0;10.0;210.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
@@ -1237,7 +1210,7 @@ Message
       <w>126</w>
       <h>45</h>
     </coordinates>
-    <panel_attributes>lt=&lt;-&gt;
+    <panel_attributes>lt=&lt;-x
 m1=1
 m2=0..*
 contains &gt;</panel_attributes>
