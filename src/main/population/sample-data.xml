@@ -435,14 +435,17 @@
 		<property name="pictureURL" value="https://www.clipartwiki.com/clipimg/detail/155-1551208_text-banner-png-transparent-picture-background-banner-orange.png" />
 		<property name="slogan" value="This is a commercial banner example" />
 		<property name="targetURL" value="http://example.com/" />
-		<property name="creditCard" value="4466233071138248" />
+		<property name="creditCard" value="541234567890125" />
+		<property name="sponsor" ref="sponsorSponsor01" />
+		
 	</bean>
 	
 	<bean id="CommercialBanner02" class="acme.entities.banners.CommercialBanner">
 		<property name="pictureURL" value="https://www.antevenio.com/usa/wp-content/uploads/2018/05/20-ejemplos-de-banners-creativos.jpg" />
 		<property name="slogan" value="This is another commercial banner example" />
 		<property name="targetURL" value="https://es.wikipedia.org/wiki/Wikipedia:Portada" />
-		<property name="creditCard" value="4928129094115167" />
+		<property name="creditCard" value="541234567890125" />
+		<property name="sponsor" ref="sponsorSponsor01" />
 	</bean>
 	
 	<bean id="NonCommercialBanner01" class="acme.entities.banners.NonCommercialBanner">
@@ -450,6 +453,7 @@
 		<property name="slogan" value="This is a commercial banner example" />
 		<property name="targetURL" value="http://www.facebook.com/" />
 		<property name="jingle" value="Queen - Don't Stop Me Now" />
+		<property name="sponsor" ref="sponsorSponsor02" />
 	</bean>
 	
 	<bean id="NonCommercialBanner02" class="acme.entities.banners.NonCommercialBanner">
@@ -457,6 +461,8 @@
 		<property name="slogan" value="This is another commercial banner example" />
 		<property name="targetURL" value="https://www.github.com" />
 		<property name="jingle" value="" />
+		<property name="sponsor" ref="sponsorSponsor02" />
+		
 	</bean>
 	
 	
@@ -476,4 +482,66 @@
 		<property name="amount" value="10.5" />
 		<property name="currency" value="€" />
 	</bean>
+	
+	
+	<!-- Sponsor -->
+	
+	<bean name="sponsorUserAccount01" class="acme.framework.entities.UserAccount">
+		<property name="username" value="sponsor" />
+		<property name="password" value="sponsor" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Sponsor" />
+				<property name="surname" value="Acme" />
+				<property name="email" value="sponsor@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="sponsorSponsor01" />
+				<ref bean="sponsorAuthenticated01" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="sponsorSponsor01" class="acme.entities.roles.Sponsor">
+		<property name="userAccount" ref="sponsorUserAccount01" />
+		<property name="organisationName" value="Microsoft" />
+		<property name="creditCard" value="541234567890125" />
+	</bean>
+	
+	<bean name="sponsorAuthenticated01" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="sponsorUserAccount01" />
+	</bean>
+	
+	<bean name="sponsorUserAccount02" class="acme.framework.entities.UserAccount">
+		<property name="username" value="sponsor2" />
+		<property name="password" value="sponsor2" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Sponsor2" />
+				<property name="surname" value="Acme" />
+				<property name="email" value="sponsor2@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="sponsorSponsor02" />
+				<ref bean="sponsorAuthenticated02" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="sponsorSponsor02" class="acme.entities.roles.Sponsor">
+		<property name="userAccount" ref="sponsorUserAccount02" />
+		<property name="organisationName" value="Google" />
+		<property name="creditCard"><null/></property>
+	</bean>
+	
+	<bean name="sponsorAuthenticated02" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="sponsorUserAccount02" />
+	</bean>
+	
 </beans>
