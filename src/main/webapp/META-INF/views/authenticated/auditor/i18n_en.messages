@@ -1,0 +1,9 @@
+authenticated.auditor.auditor.form.title.create = Become a auditor
+authenticated.auditor.auditor.form.title.update = Update your auditor data
+
+authenticated.auditor.auditor.form.label.firm = Firm
+authenticated.auditor.auditor.form.label.responsibility-statement = Responsibility Statement
+
+authenticated.auditor.auditor.form.button.create = Register
+authenticated.auditor.auditor.form.button.update = Update
+authenticated.auditor.auditor.form.button.return = Return

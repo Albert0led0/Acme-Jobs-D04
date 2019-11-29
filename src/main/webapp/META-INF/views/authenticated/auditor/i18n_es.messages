@@ -1,0 +1,9 @@
+authenticated.auditor.auditor.form.title.create = Hazte un oyente
+authenticated.auditor.auditor.form.title.update = Actualiza tus datos de oyente
+
+authenticated.auditor.auditor.form.label.firm = Firma
+authenticated.auditor.auditor.form.label.responsibility-statement = Declaración de responsabilidad
+
+authenticated.auditor.auditor.form.button.create = Registarse
+authenticated.auditor.auditor.form.button.update = Actualizar
+authenticated.auditor.auditor.form.button.return = Volver

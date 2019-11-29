@@ -60,6 +60,10 @@ master.menu.provider.favourite-link 	= Enlace favorito
 master.menu.consumer 					= Consumidor
 master.menu.consumer.favourite-link 	= Enlace favorito
 
+# master.menu.auditor ##########################################################
+
+master.menu.auditor 					= Oyente
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account 					= Cuenta
@@ -68,6 +72,8 @@ master.menu.user-account.provider 			= Datos de proveedor
 master.menu.user-account.become-provider 	= Hazte proveedor
 master.menu.user-account.consumer 			= Datos de consumidor
 master.menu.user-account.become-consumer 	= Hazte consumidor
+master.menu.user-account.auditor 			= Datos del oyente
+master.menu.user-account.become-auditor 	= Hazte oyente
 
 # master.menu.company-record ##################################################
 
