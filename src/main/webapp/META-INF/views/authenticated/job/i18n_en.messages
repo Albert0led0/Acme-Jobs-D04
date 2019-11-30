@@ -1,0 +1,14 @@
+# i18n_en.messages
+
+authenticated.job.form.label.referenceNumber = Reference Number:
+authenticated.job.form.label.title = Title:
+authenticated.job.form.label.deadline = Deadline:
+authenticated.job.form.label.salary = Salary:
+authenticated.job.form.label.link = Link:
+authenticated.job.form.label.description = Description:
+
+authenticated.job.form.button.return = Return
+
+authenticated.job.list.referenceNumber = Reference Number
+authenticated.job.list.title = Title
+authenticated.job.list.deadline = Deadline
