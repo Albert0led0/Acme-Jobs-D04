@@ -84,6 +84,10 @@
 			<acme:menu-suboption code="master.menu.challenge.create" action="/administrator/challenge/create" access="hasRole('Administrator')"/>
 		</acme:menu-option>
 		
+		<acme:menu-option code="master.menu.job" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.job.list-active" action="/authenticated/job/list-active"/>
+		</acme:menu-option>
+		
 		<acme:menu-option code="master.menu.banner" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.commercial-banner.list" action="/administrator/commercial-banner/list"/>
 			<acme:menu-suboption code="master.menu.non-commercial-banner.list" action="/administrator/non-commercial-banner/list"/>

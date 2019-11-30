@@ -90,6 +90,11 @@ master.menu.challenge.list 			= Challenges list
 master.menu.challenge.list-active 	= Active challenges
 master.menu.challenge.create 		= New challenge
 
+# master.menu.job #############################################################
+
+master.menu.job					= Jobs
+master.menu.job.list-active		= Active jobs
+
 # master.footer ###############################################################
 
 master.footer.title.about 		= About us
