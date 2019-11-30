@@ -149,6 +149,10 @@ master.menu.non-commercial-banner.list 		= All non commercial banners
 master.menu.commercial-banner.create 		= Create a commercial banner
 master.menu.non-commercial-banner.create 	= Create a non commercial banner
 
+# master.menu.thread ####################################################
+master.menu.thread = Threads
+master.menu.thread.threads = My Threads
+
 # master.license ##############################################################
 
 master.license.title 	= License

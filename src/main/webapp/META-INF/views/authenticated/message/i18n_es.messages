@@ -1,0 +1,8 @@
+authenticated.message.list.label.title = Título
+authenticated.message.list.label.moment = Momento
+
+authenticated.message.form.label.title = Título:
+authenticated.message.form.label.moment = Momento:
+authenticated.message.form.label.tags = Etiquetas:
+authenticated.message.form.label.body = Cuerpo:
+authenticated.message.form.button.return = Volver

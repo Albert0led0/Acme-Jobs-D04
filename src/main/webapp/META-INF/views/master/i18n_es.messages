@@ -148,6 +148,10 @@ master.menu.non-commercial-banner.list 		= Lista de pancartas no comerciales
 master.menu.commercial-banner.create 		= Crear pancarta comercial
 master.menu.non-commercial-banner.create 	= Crear una pancarta no comercial
 
+# master.menu.thread ####################################################
+master.menu.thread = Hilos
+master.menu.thread.threads = Mis hilos
+
 # master.license ##############################################################
 
 master.license.title 	= Licencia

@@ -655,5 +655,57 @@
 		<property name="job" ref="Job04" />
 	</bean>
 	
+	<!-- Threads -->
+	
+	<bean id="ExampleThreadUser01" class="acme.framework.entities.Authenticated">
+		
+	</bean>
+	
+	<bean id="Thread01" class="acme.entities.messages.Thread">
+		<property name="title" value="Example of a thread" />
+		<property name="moment" value="2019/10/28 00:00" />
+		<property name="authenticated">
+			<list>
+				<ref bean="ExampleThreadUser01" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="Message01" class="acme.entities.messages.Message">
+		<property name="title" value="Example of a message 01" />
+		<property name="moment" value="2019/10/28 00:05" />
+		<property name="tags" value="Example, University" />
+		<property name="body" value="This is an example of a message for a thread test" />
+		<property name="thread">
+			<list>
+				<ref bean="Thread01" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="Message02" class="acme.entities.messages.Message">
+		<property name="title" value="Example of a message 02" />
+		<property name="moment" value="2019/10/28 12:35" />
+		<property name="tags" value="Example, University" />
+		<property name="body" value="This is the second example of a message for a thread test" />
+		<property name="thread">
+			<list>
+				<ref bean="Thread01" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="Message03" class="acme.entities.messages.Message">
+		<property name="title" value="Example of a message 03" />
+		<property name="moment" value="2019/10/29 00:05" />
+		<property name="tags" value="Example, University" />
+		<property name="body" value="This is the last example of a message for a thread test" />
+		<property name="thread">
+			<list>
+				<ref bean="Thread01" />
+			</list>
+		</property>
+	</bean>
+	
 	
 </beans>
