@@ -48,7 +48,7 @@
 		<property name="userAccount" ref="employerUserAccount" />
 	</bean>
 	
-	<!-- Worker -->
+	<!-- Workers -->
 	
 	<bean name="workerUserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="worker" />
@@ -77,6 +77,35 @@
 	
 	<bean name="workerAuthenticated" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="workerUserAccount" />
+	</bean>
+	
+	<bean name="workerUserAccount2" class="acme.framework.entities.UserAccount">
+		<property name="username" value="worker2" />
+		<property name="password" value="worker2" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Worker" />
+				<property name="surname" value="Acme" />
+				<property name="email" value="worker@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="workerWorker2" />
+				<ref bean="workerAuthenticated2" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="workerWorker2" class="acme.entities.roles.Worker">
+		<property name="userAccount" ref="workerUserAccount2" />
+		<property name="qualificationsRecord" value="Bachillerato, Nivel B1 Inglés." />
+		<property name="skillsRecord" value="Buena organización y trabajo en grupo." />
+	</bean>
+	
+	<bean name="workerAuthenticated2" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="workerUserAccount2" />
 	</bean>
 
 	<!-- BonaciniBulletins -->
@@ -653,6 +682,28 @@
 		<property name="qualifications" value="Qualification01, Qualification02, Qualification03, Qualification04" />
 		<property name="worker" ref="workerWorker" />
 		<property name="job" ref="Job04" />
+	</bean>
+
+	<bean id="Application05" class="acme.entities.applications.Application">
+		<property name="referenceNumber" value="ref-app05" />
+		<property name="moment" value="2019/12/01 21:20" />
+		<property name="status" value="accepted" />
+		<property name="statement" value="Por favor, contratadme 05" />
+		<property name="skills" value="Skill01, Skill02, Skill03" />
+		<property name="qualifications" value="Qualification01, Qualification02, Qualification03, Qualification04" />
+		<property name="worker" ref="workerWorker2" />
+		<property name="job" ref="Job04" />
+	</bean>
+	
+	<bean id="Application06" class="acme.entities.applications.Application">
+		<property name="referenceNumber" value="ref-app06" />
+		<property name="moment" value="2019/12/01 21:31" />
+		<property name="status" value="pending" />
+		<property name="statement" value="Por favor, contratadme 06" />
+		<property name="skills" value="Skill01, Skill02, Skill03" />
+		<property name="qualifications" value="Qualification01, Qualification02, Qualification03, Qualification04" />
+		<property name="worker" ref="workerWorker2" />
+		<property name="job" ref="Job03" />
 	</bean>
 	
 	

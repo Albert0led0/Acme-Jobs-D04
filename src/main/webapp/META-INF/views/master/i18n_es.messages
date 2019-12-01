@@ -95,6 +95,11 @@ master.menu.challenge.create 		= Nuevo reto
 master.menu.job					= Trabajos
 master.menu.job.list-active		= Trabajos activos
 
+# master.menu.application #####################################################
+
+master.menu.application				= Solicitudes
+master.menu.application.list-mine	= Mis solicitudes
+
 ﻿# master.footer ###############################################################
 
 master.footer.title.about 		= Nosotros
