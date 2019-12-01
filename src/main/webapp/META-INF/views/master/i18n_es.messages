@@ -151,6 +151,7 @@ master.menu.non-commercial-banner.create 	= Crear una pancarta no comercial
 # master.menu.audit-record ##############################################################
 master.menu.audit-record = Registro de oyente
 master.menu.audit-record-mine = Mis registros de oyente
+master.menu.audit-record-not-mine = Registros de oyente de otros
 
 # master.license ##############################################################
 

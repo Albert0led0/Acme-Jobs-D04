@@ -18,15 +18,19 @@ import acme.framework.controllers.AbstractController;
 public class AuditorAuditRecordController extends AbstractController<Auditor, AuditRecord> {
 
 	@Autowired
-	private AuditorAuditRecordListMineService	listMineService;
+	private AuditorAuditRecordListMineService		listMineService;
 
 	@Autowired
-	private AuditorAuditRecordShowService		showService;
+	private AuditorAuditRecordListNotMineService	listNotMineService;
+
+	@Autowired
+	private AuditorAuditRecordShowService			showService;
 
 
 	@PostConstruct
 	private void initialise() {
 		super.addCustomCommand(CustomCommand.LIST_WRITTEN, BasicCommand.LIST, this.listMineService);
+		super.addCustomCommand(CustomCommand.LIST_NOTWRITTEN, BasicCommand.LIST, this.listNotMineService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 

@@ -152,6 +152,7 @@ master.menu.non-commercial-banner.create 	= Create a non commercial banner
 # master.menu.audit-record ##############################################################
 master.menu.audit-record = Audit Records
 master.menu.audit-record-mine = My Audit Records
+master.menu.audit-record-not-mine = Other's Audit Records
 
 # master.license ##############################################################
 
