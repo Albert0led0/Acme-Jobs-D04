@@ -1,0 +1,11 @@
+auditor.audit-record.list.label.title = Título
+auditor.audit-record.list.label.status = Estatus
+auditor.audit-record.list.label.job = Trabajo
+auditor.audit-record.list.label.moment = Momento
+
+auditor.audit-record.form.label.title = Título:
+auditor.audit-record.form.label.status = Estatus:
+auditor.audit-record.form.label.moment = Momento:
+auditor.audit-record.form.label.body = Cuerpo:
+auditor.audit-record.form.label.draft = Borrador:
+auditor.audit-record.form.button.return = Volver

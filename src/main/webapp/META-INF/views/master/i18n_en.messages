@@ -149,6 +149,10 @@ master.menu.non-commercial-banner.list 		= All non commercial banners
 master.menu.commercial-banner.create 		= Create a commercial banner
 master.menu.non-commercial-banner.create 	= Create a non commercial banner
 
+# master.menu.audit-record ##############################################################
+master.menu.audit-record = Audit Records
+master.menu.audit-record-mine = My Audit Records
+
 # master.license ##############################################################
 
 master.license.title 	= License

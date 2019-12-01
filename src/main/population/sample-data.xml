@@ -655,5 +655,25 @@
 		<property name="job" ref="Job04" />
 	</bean>
 	
+	<!-- Audit Records -->
+	
+	<bean id="AuditRecord01" class="acme.entities.auditRecords.AuditRecord">
+		<property name="title" value="Audit Record Example 01" />
+		<property name="date" value="2019/11/28 19:15" />
+		<property name="body" value="This is an example for Desing and Testing subject" />
+		<property name="draft" value="false" />
+		<property name="auditor" ref="" />
+		<property name="job" ref="Job01" />
+	</bean>
+	
+	<bean id="AuditRecord02" class="acme.entities.auditRecords.AuditRecord">
+		<property name="title" value="Audit Record Example 02" />
+		<property name="date" value="2019/11/29 19:15" />
+		<property name="body" value="This is a second example for Desing and Testing subject" />
+		<property name="draft" value="true" />
+		<property name="auditor" ref="" />
+		<property name="job" ref="Job02" />
+	</bean>
+	
 	
 </beans>

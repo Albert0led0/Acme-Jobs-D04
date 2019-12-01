@@ -148,6 +148,10 @@ master.menu.non-commercial-banner.list 		= Lista de pancartas no comerciales
 master.menu.commercial-banner.create 		= Crear pancarta comercial
 master.menu.non-commercial-banner.create 	= Crear una pancarta no comercial
 
+# master.menu.audit-record ##############################################################
+master.menu.audit-record = Registro de oyente
+master.menu.audit-record-mine = Mis registros de oyente
+
 # master.license ##############################################################
 
 master.license.title 	= Licencia
