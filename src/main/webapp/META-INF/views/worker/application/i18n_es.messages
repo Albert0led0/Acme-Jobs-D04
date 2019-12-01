@@ -1,0 +1,14 @@
+# i18n_es.messages
+
+worker.application.form.label.referenceNumber = Número de referencia:
+worker.application.form.label.moment = Momento de creación:
+worker.application.form.label.status = Estado:
+worker.application.form.label.statement = Declaración:
+worker.application.form.label.skills = Habilidades:
+worker.application.form.label.qualifications = Títulos:
+
+worker.application.form.button.return = Volver
+
+worker.application.list.referenceNumber = Número de referencia
+worker.application.list.moment = Momento de creación
+worker.application.list.status = Estado
