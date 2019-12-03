@@ -657,14 +657,10 @@
 	
 	<!-- Threads -->
 	
-	<bean id="ExampleThreadUser01" class="acme.framework.entities.Authenticated">
-		
-	</bean>
-	
 	<bean id="Thread01" class="acme.entities.messages.Thread">
 		<property name="title" value="Example of a thread" />
 		<property name="moment" value="2019/10/28 00:00" />
-		<property name="authenticated" ref="HERE WILL BE THE PRINCIPAL AUTHENTICATED USER" />
+		<property name="authenticated" ref="threadAuthenticated" />
 	</bean>
 	
 	<bean id="Message01" class="acme.entities.messages.Message">
@@ -691,5 +687,26 @@
 		<property name="thread" ref="Thread01" />
 	</bean>
 	
+	<bean name="userThread" class="acme.framework.entities.UserAccount">
+		<property name="username" value="thread" />
+		<property name="password" value="thread" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Thread Test" />
+				<property name="surname" value="Acme.com" />
+				<property name="email" value="thread@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="threadAuthenticated" />
+			</list>
+		</property>
+	</bean>	
+	
+		<bean name="threadAuthenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="userThread" />
+	</bean>
 	
 </beans>
