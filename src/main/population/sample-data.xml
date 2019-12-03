@@ -659,30 +659,87 @@
 	
 	<bean id="AuditRecord01" class="acme.entities.auditRecords.AuditRecord">
 		<property name="title" value="Audit Record Example 01" />
-		<property name="date" value="2019/11/28 19:15" />
+		<property name="moment" value="2019/11/28 19:15" />
 		<property name="body" value="This is an example for Desing and Testing subject" />
 		<property name="draft" value="false" />
-		<property name="auditor" ref="HERE WILL BE THE PRINCIPAL AUDITOR USER" />
+		<property name="auditor" ref="auditorAuditor" />
 		<property name="job" ref="Job01" />
 	</bean>
 	
 	<bean id="AuditRecord02" class="acme.entities.auditRecords.AuditRecord">
 		<property name="title" value="Audit Record Example 02" />
-		<property name="date" value="2019/11/29 19:15" />
+		<property name="moment" value="2019/11/29 19:15" />
 		<property name="body" value="This is a second example for Desing and Testing subject" />
 		<property name="draft" value="true" />
-		<property name="auditor" ref="HERE WILL BE THE PRINCIPAL AUDITOR USER" />
+		<property name="auditor" ref="auditorAuditor" />
 		<property name="job" ref="Job02" />
 	</bean>
 	
 	<bean id="AuditRecord03" class="acme.entities.auditRecords.AuditRecord">
 		<property name="title" value="Audit Record Example 03" />
-		<property name="date" value="2019/11/30 19:15" />
+		<property name="moment" value="2019/11/30 19:15" />
 		<property name="body" value="This is the third example for Desing and Testing subject" />
 		<property name="draft" value="true" />
-		<property name="auditor" ref="HERE WILL BE A DIFFERENT AUDITOR USER" />
+		<property name="auditor" ref="auditorAuditor01" />
 		<property name="job" ref="Job03" />
 	</bean>
 	
+	<bean name="auditorExample" class="acme.framework.entities.UserAccount">
+		<property name="username" value="auditor" />
+		<property name="password" value="auditor" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Auditor" />
+				<property name="surname" value="Acme.com" />
+				<property name="email" value="auditor@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="auditorAuditor" />
+				<ref bean="auditorAuthenticated" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="auditorAuditor" class="acme.entities.roles.Auditor">
+		<property name="userAccount" ref="auditorExample" />
+		<property name="firm" value="https://www.informatica.us.es/" />
+		<property name="responsibilityStatement" value="NO" />
+	</bean>
+	
+	<bean name="auditorAuthenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="auditorExample" />
+	</bean>
+	
+	<bean name="auditorExample01" class="acme.framework.entities.UserAccount">
+		<property name="username" value="auditor01" />
+		<property name="password" value="auditor01" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Auditor" />
+				<property name="surname" value="Acme.com" />
+				<property name="email" value="auditor@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="auditorAuditor01" />
+				<ref bean="auditorAuthenticated01" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="auditorAuditor01" class="acme.entities.roles.Auditor">
+		<property name="userAccount" ref="auditorExample01" />
+		<property name="firm" value="https://www.google.com/" />
+		<property name="responsibilityStatement" value="YES" />
+	</bean>
+	
+	<bean name="auditorAuthenticated01" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="auditorExample01" />
+	</bean>
 	
 </beans>
