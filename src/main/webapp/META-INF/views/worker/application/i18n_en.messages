@@ -10,5 +10,5 @@ worker.application.form.label.qualifications = Qualifications:
 worker.application.form.button.return = Return
 
 worker.application.list.referenceNumber = Reference Number
-worker.application.list.moment = Creaton moment
+worker.application.list.moment = Creation moment
 worker.application.list.status = Status

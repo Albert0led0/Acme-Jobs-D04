@@ -92,12 +92,9 @@ master.menu.challenge.create 		= Nuevo reto
 
 # master.menu.job #############################################################
 
-master.menu.job					= Trabajos
-master.menu.job.list-active		= Trabajos activos
-
-# master.menu.employer.job #############################################################
-
-master.menu.employer.job.list-mine = Trabajos del empresario
+master.menu.job						= Trabajos
+master.menu.job.list-active			= Trabajos activos
+master.menu.employer.job.list-mine 	= Mis trabajos
 
 # master.menu.application #####################################################
 

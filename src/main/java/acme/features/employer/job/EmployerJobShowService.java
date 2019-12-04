@@ -36,7 +36,7 @@ public class EmployerJobShowService implements AbstractShowService<Employer, Job
 		job = this.repository.findOneJobById(jobId);
 		employer = job.getEmployer();
 		principal = request.getPrincipal();
-		res = !job.isDraft() || job.isDraft() && employer.getUserAccount().getId() == principal.getActiveRoleId();
+		res = employer.getUserAccount().getId() == principal.getAccountId();
 
 		return res;
 	}

@@ -622,7 +622,7 @@
 		<property name="salary">
 			<ref bean="MoneySalary05" />
 		</property>
-		<property name="link" value="http://www.examplejob.com"/>
+		<property name="link" value="http://www.example.org"/>
 		<property name="draft" value="false" />
 		<property name="employer" ref="employerEmployer1" />		
 		<property name="description" value="Esto es la descripción del trabajo 05" />

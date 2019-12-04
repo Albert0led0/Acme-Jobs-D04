@@ -7,6 +7,14 @@
        drop 
        foreign key FK_6lnbc6fo3om54vugoh8icg78m;
 
+    alter table `application` 
+       drop 
+       foreign key `FKoa6p4s2oyy7tf80xwc4r04vh6`;
+
+    alter table `application` 
+       drop 
+       foreign key `FKmbjdoxi3o93agxosoate4sxbt`;
+
     alter table `authenticated` 
        drop 
        foreign key FK_h52w0f3wjoi68b63wv9vwon57;
@@ -17,15 +25,11 @@
 
     alter table `duty` 
        drop 
-       foreign key `FK3cc3garl37bl7gswreqwr7pj4`;
+       foreign key `FKs2uoxh4i5ya8ptyefae60iao1`;
 
     alter table `employer` 
        drop 
        foreign key FK_na4dfobmeuxkwf6p75abmb2tr;
-
-    alter table `job` 
-       drop 
-       foreign key `FKfqwyynnbcsq0htxho3vchpd2u`;
 
     alter table `job` 
        drop 
@@ -45,6 +49,8 @@
 
     drop table if exists `anonymous`;
 
+    drop table if exists `application`;
+
     drop table if exists `authenticated`;
 
     drop table if exists `barba_bulletin`;
@@ -60,8 +66,6 @@
     drop table if exists `configuration`;
 
     drop table if exists `consumer`;
-
-    drop table if exists `descriptor`;
 
     drop table if exists `duty`;
 

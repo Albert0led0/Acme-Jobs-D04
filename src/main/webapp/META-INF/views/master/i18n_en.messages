@@ -92,12 +92,9 @@ master.menu.challenge.create 		= New challenge
 
 # master.menu.job #############################################################
 
-master.menu.job					= Jobs
-master.menu.job.list-active		= Active jobs
-
-# master.menu.employer.job #############################################################
-
-master.menu.employer.job.list-mine = Employer Jobs
+master.menu.job						= Jobs
+master.menu.job.list-active			= Active jobs
+master.menu.employer.job.list-mine 	= My jobs
 
 # master.menu.application #####################################################
 
