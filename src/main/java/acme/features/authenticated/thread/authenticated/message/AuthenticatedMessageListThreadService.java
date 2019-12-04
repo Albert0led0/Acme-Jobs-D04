@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.message;
+package acme.features.authenticated.thread.authenticated.message;
 
 import java.util.Collection;
 
@@ -41,11 +41,11 @@ public class AuthenticatedMessageListThreadService implements AbstractListServic
 		assert request != null;
 
 		Collection<Message> result;
-		Thread thread;
+		acme.entities.messages.Thread thread;
 		int id;
 
-		thread = (Thread) request.getModel().getAttribute("thread");
-		id = (int) thread.getId();
+		thread = (acme.entities.messages.Thread) request.getModel().getAttribute("thread");
+		id = thread.getId();
 		result = this.repository.findThreadContained(id);
 
 		return result;

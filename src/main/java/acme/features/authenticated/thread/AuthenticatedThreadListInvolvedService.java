@@ -13,21 +13,21 @@ import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedThreadListInvolvedService implements AbstractListService<Authenticated, Thread> {
+public class AuthenticatedThreadListInvolvedService implements AbstractListService<Authenticated, acme.entities.messages.Thread> {
 
 	@Autowired
 	AuthenticatedThreadRepository repository;
 
 
 	@Override
-	public boolean authorise(final Request<Thread> request) {
+	public boolean authorise(final Request<acme.entities.messages.Thread> request) {
 		assert request != null;
 
 		return true;
 	}
 
 	@Override
-	public void unbind(final Request<Thread> request, final Thread entity, final Model model) {
+	public void unbind(final Request<acme.entities.messages.Thread> request, final acme.entities.messages.Thread entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
@@ -37,10 +37,10 @@ public class AuthenticatedThreadListInvolvedService implements AbstractListServi
 	}
 
 	@Override
-	public Collection<Thread> findMany(final Request<Thread> request) {
+	public Collection<acme.entities.messages.Thread> findMany(final Request<acme.entities.messages.Thread> request) {
 		assert request != null;
 
-		Collection<Thread> result;
+		Collection<acme.entities.messages.Thread> result;
 		Principal principal;
 
 		principal = request.getPrincipal();

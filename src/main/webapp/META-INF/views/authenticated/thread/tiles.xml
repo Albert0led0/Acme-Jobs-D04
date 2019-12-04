@@ -5,12 +5,12 @@
 
 <tiles-definitions>
 
-	<definition name="authenticated/message/list" extends="master">		
-		<put-attribute name="body" type="template" value="../authenticated/message/list.jsp" />
+	<definition name="authenticated/thread/list" extends="master">		
+		<put-attribute name="body" type="template" value="../authenticated/thread/list.jsp" />
 	</definition>
 	
-	<definition name="authenticated/message/form" extends="master">
-		<put-attribute name="body" type="template" value="../authenticated/message/form.jsp" />
+	<definition name="authenticated/thread/form" extends="master">
+		<put-attribute name="body" type="template" value="../authenticated/thread/form.jsp" />
 	</definition>
 
 </tiles-definitions>

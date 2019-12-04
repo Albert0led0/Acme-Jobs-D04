@@ -6,7 +6,7 @@
 <acme:form>
 	<acme:form-textbox code="authenticated.thread.form.label.title" path="title"/>
 	<acme:form-moment code="authenticated.thread.form.label.moment" path="moment"/>
-	<acme:menu-suboption code="authenticated.thread.form.label.message" action="authenticated/message/list-thread"/>
+	<acme:menu-suboption code="authenticated.thread.form.label.message" action="/authenticated/message/list-thread"/>
 
   	<acme:form-return code="authenticated.thread.form.button.return"/>
 </acme:form>

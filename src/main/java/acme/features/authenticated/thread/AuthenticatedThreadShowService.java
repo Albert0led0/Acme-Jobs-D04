@@ -10,20 +10,20 @@ import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AuthenticatedThreadShowService implements AbstractShowService<Authenticated, Thread> {
+public class AuthenticatedThreadShowService implements AbstractShowService<Authenticated, acme.entities.messages.Thread> {
 
 	@Autowired
 	private AuthenticatedThreadRepository repository;
 
 
 	@Override
-	public boolean authorise(final Request<Thread> request) {
+	public boolean authorise(final Request<acme.entities.messages.Thread> request) {
 		assert request != null;
 		return true;
 	}
 
 	@Override
-	public void unbind(final Request<Thread> request, final Thread entity, final Model model) {
+	public void unbind(final Request<acme.entities.messages.Thread> request, final acme.entities.messages.Thread entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
@@ -32,8 +32,8 @@ public class AuthenticatedThreadShowService implements AbstractShowService<Authe
 	}
 
 	@Override
-	public Thread findOne(final Request<Thread> request) {
-		Thread result;
+	public acme.entities.messages.Thread findOne(final Request<acme.entities.messages.Thread> request) {
+		acme.entities.messages.Thread result;
 		int id;
 
 		id = request.getModel().getInteger("id");

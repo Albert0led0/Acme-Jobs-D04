@@ -14,7 +14,7 @@ import acme.framework.entities.Authenticated;
 
 @Controller
 @RequestMapping("/authenticated/thread/")
-public class AuthenticatedThreadController extends AbstractController<Authenticated, Thread> {
+public class AuthenticatedThreadController extends AbstractController<Authenticated, acme.entities.messages.Thread> {
 
 	@Autowired
 	private AuthenticatedThreadListInvolvedService	listActiveService;
