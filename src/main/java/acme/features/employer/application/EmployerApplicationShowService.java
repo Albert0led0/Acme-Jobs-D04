@@ -39,7 +39,7 @@ public class EmployerApplicationShowService implements AbstractShowService<Emplo
 		job = app.getJob();
 		employer = job.getEmployer();
 		principal = request.getPrincipal();
-		res = !job.isDraft() || job.isDraft() && employer.getUserAccount().getId() == principal.getActiveRoleId();
+		res = employer.getUserAccount().getId() == principal.getAccountId();
 
 		return res;
 	}
