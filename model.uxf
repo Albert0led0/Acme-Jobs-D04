@@ -166,7 +166,7 @@ bg=yellow</panel_attributes>
       <x>855</x>
       <y>477</y>
       <w>198</w>
-      <h>108</h>
+      <h>117</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Enum&gt;&gt;
 CustomCommand
@@ -175,6 +175,7 @@ CustomCommand
 + LIST_ACTIVE
 + DISPLAY
 + LIST_TOP
++ LIST_MINE
 
 bg=orange</panel_attributes>
     <additional_attributes/>
