@@ -48,6 +48,36 @@
 		<property name="userAccount" ref="employerUserAccount" />
 	</bean>
 	
+	
+	<bean name="employerUserAccount1" class="acme.framework.entities.UserAccount">
+		<property name="username" value="employer1" />
+		<property name="password" value="employer1" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Employer1" />
+				<property name="surname" value="Acme" />
+				<property name="email" value="employer1@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="employerEmployer1" />
+				<ref bean="employerAuthenticated1" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="employerEmployer1" class="acme.entities.roles.Employer">
+		<property name="userAccount" ref="employerUserAccount1" />
+		<property name="companyName" value="AcmeEmployer02" />
+		<property name="activitySector" value="Informática" />
+	</bean>
+	
+	<bean name="employerAuthenticated1" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="employerUserAccount1" />
+	</bean>
+	
 	<!-- Workers -->
 	
 	<bean name="workerUserAccount" class="acme.framework.entities.UserAccount">
@@ -526,6 +556,11 @@
 		<property name="currency" value="€" />
 	</bean>
 	
+	<bean id="MoneySalary05" class="acme.framework.datatypes.Money">
+		<property name="amount" value="4560.0" />
+		<property name="currency" value="€" />
+	</bean>
+	
 	<!-- Jobs -->
 	<!-- !active job -->
 	<bean id="Job01" class="acme.entities.jobs.Job">
@@ -563,7 +598,7 @@
 		</property>
 		<property name="link"><null/></property>
 		<property name="draft" value="false" />
-		<property name="employer" ref="employerEmployer" />
+		<property name="employer" ref="employerEmployer1" />
 		<property name="description" value="Esto es la descripción del trabajo 03" />
 	</bean>
 	<!-- active job -->
@@ -578,6 +613,19 @@
 		<property name="draft" value="false" />
 		<property name="employer" ref="employerEmployer" />		
 		<property name="description" value="Esto es la descripción del trabajo 04" />
+	</bean>
+	
+	<bean id="Job05" class="acme.entities.jobs.Job">
+		<property name="referenceNumber" value="ref-job05" />
+		<property name="title" value="Job05" />
+		<property name="deadline" value="2022/02/01 15:00"/>
+		<property name="salary">
+			<ref bean="MoneySalary05" />
+		</property>
+		<property name="link" value="http://www.examplejob.com"/>
+		<property name="draft" value="false" />
+		<property name="employer" ref="employerEmployer1" />		
+		<property name="description" value="Esto es la descripción del trabajo 05" />
 	</bean>
 	
 	<!-- Duties -->
@@ -692,7 +740,7 @@
 		<property name="skills" value="Skill01, Skill02, Skill03" />
 		<property name="qualifications" value="Qualification01, Qualification02, Qualification03, Qualification04" />
 		<property name="worker" ref="workerWorker2" />
-		<property name="job" ref="Job04" />
+		<property name="job" ref="Job05" />
 	</bean>
 	
 	<bean id="Application06" class="acme.entities.applications.Application">
