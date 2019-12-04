@@ -95,6 +95,10 @@ master.menu.challenge.create 		= New challenge
 master.menu.job					= Jobs
 master.menu.job.list-active		= Active jobs
 
+# master.menu.employer.job #############################################################
+
+master.menu.employer.job.list-mine = Employer Jobs
+
 # master.menu.application #####################################################
 
 master.menu.application				= Applications
