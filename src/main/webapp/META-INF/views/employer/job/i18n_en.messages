@@ -14,3 +14,4 @@ employer.job.form.label.title = Title
 employer.job.form.label.salary = Salary
 employer.job.form.label.link = Link
 employer.job.form.label.description = Description
+employer.job.form.button.return = Return
