@@ -97,6 +97,42 @@ INSERT INTO `anonymous` VALUES (2,0,1);
 UNLOCK TABLES;
 
 --
+-- Table structure for table `application`
+--
+
+DROP TABLE IF EXISTS `application`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `application` (
+  `id` int(11) NOT NULL,
+  `version` int(11) NOT NULL,
+  `moment` datetime(6) DEFAULT NULL,
+  `qualifications` varchar(255) DEFAULT NULL,
+  `reference_number` varchar(255) DEFAULT NULL,
+  `skills` varchar(255) DEFAULT NULL,
+  `statement` varchar(255) DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
+  `job_id` int(11) NOT NULL,
+  `worker_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UK_rf84q38qr35ymh5nn0dcxfdue` (`reference_number`),
+  KEY `FKoa6p4s2oyy7tf80xwc4r04vh6` (`job_id`),
+  KEY `FKmbjdoxi3o93agxosoate4sxbt` (`worker_id`),
+  CONSTRAINT `FKmbjdoxi3o93agxosoate4sxbt` FOREIGN KEY (`worker_id`) REFERENCES `worker` (`id`),
+  CONSTRAINT `FKoa6p4s2oyy7tf80xwc4r04vh6` FOREIGN KEY (`job_id`) REFERENCES `job` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `application`
+--
+
+LOCK TABLES `application` WRITE;
+/*!40000 ALTER TABLE `application` DISABLE KEYS */;
+/*!40000 ALTER TABLE `application` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `authenticated`
 --
 
@@ -324,6 +360,63 @@ LOCK TABLES `consumer` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `duty`
+--
+
+DROP TABLE IF EXISTS `duty`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `duty` (
+  `id` int(11) NOT NULL,
+  `version` int(11) NOT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `time_percentage` double NOT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `job_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKs2uoxh4i5ya8ptyefae60iao1` (`job_id`),
+  CONSTRAINT `FKs2uoxh4i5ya8ptyefae60iao1` FOREIGN KEY (`job_id`) REFERENCES `job` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `duty`
+--
+
+LOCK TABLES `duty` WRITE;
+/*!40000 ALTER TABLE `duty` DISABLE KEYS */;
+/*!40000 ALTER TABLE `duty` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `employer`
+--
+
+DROP TABLE IF EXISTS `employer`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `employer` (
+  `id` int(11) NOT NULL,
+  `version` int(11) NOT NULL,
+  `user_account_id` int(11) DEFAULT NULL,
+  `activity_sector` varchar(255) DEFAULT NULL,
+  `company_name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_na4dfobmeuxkwf6p75abmb2tr` (`user_account_id`),
+  CONSTRAINT `FK_na4dfobmeuxkwf6p75abmb2tr` FOREIGN KEY (`user_account_id`) REFERENCES `user_account` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `employer`
+--
+
+LOCK TABLES `employer` WRITE;
+/*!40000 ALTER TABLE `employer` DISABLE KEYS */;
+/*!40000 ALTER TABLE `employer` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `hibernate_sequence`
 --
 
@@ -371,6 +464,41 @@ CREATE TABLE `investor_record` (
 LOCK TABLES `investor_record` WRITE;
 /*!40000 ALTER TABLE `investor_record` DISABLE KEYS */;
 /*!40000 ALTER TABLE `investor_record` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `job`
+--
+
+DROP TABLE IF EXISTS `job`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `job` (
+  `id` int(11) NOT NULL,
+  `version` int(11) NOT NULL,
+  `deadline` datetime(6) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `draft` bit(1) NOT NULL,
+  `link` varchar(255) DEFAULT NULL,
+  `reference_number` varchar(255) DEFAULT NULL,
+  `salary_amount` double DEFAULT NULL,
+  `salary_currency` varchar(255) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `employer_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UK_bos0omdc9s5vykasqjhwaq65m` (`reference_number`),
+  KEY `FK3rxjf8uh6fh2u990pe8i2at0e` (`employer_id`),
+  CONSTRAINT `FK3rxjf8uh6fh2u990pe8i2at0e` FOREIGN KEY (`employer_id`) REFERENCES `employer` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `job`
+--
+
+LOCK TABLES `job` WRITE;
+/*!40000 ALTER TABLE `job` DISABLE KEYS */;
+/*!40000 ALTER TABLE `job` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -573,8 +701,36 @@ CREATE TABLE `user_account` (
 
 LOCK TABLES `user_account` WRITE;
 /*!40000 ALTER TABLE `user_account` DISABLE KEYS */;
-INSERT INTO `user_account` VALUES (1,0,_binary '\0','john.doe@acme.com','John','Doe','$2a$05$Y.q4KAITJovM8aUYNvsVruV6J4UNcGXsZPJRRQyWeVoEwihkrBN4.','anonymous'),(3,0,_binary '','administrator@acme.com','Administrator','Acme.com','$2a$05$vCS/QYrZ5riLy2ut1ogYYey0IOa8cAWJ9/NOteGdZ.xVcnkWxwmJS','administrator');
+INSERT INTO `user_account` VALUES (1,0,_binary '\0','john.doe@acme.com','John','Doe','$2a$05$jbjeU4xdpiBblrFrtc7WcOKcLitSfCmsf0qiaV8QBE8HlH7MQVLa6','anonymous'),(3,0,_binary '','administrator@acme.com','Administrator','Acme.com','$2a$05$SRy8xH8qX48hdFiY2uVgU.NV0hh.SQGoU9cZycpBMxXjvTusqEQO6','administrator');
 /*!40000 ALTER TABLE `user_account` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `worker`
+--
+
+DROP TABLE IF EXISTS `worker`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `worker` (
+  `id` int(11) NOT NULL,
+  `version` int(11) NOT NULL,
+  `user_account_id` int(11) DEFAULT NULL,
+  `qualifications_record` varchar(255) DEFAULT NULL,
+  `skills_record` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_l5q1f33vs2drypmbdhpdgwfv3` (`user_account_id`),
+  CONSTRAINT `FK_l5q1f33vs2drypmbdhpdgwfv3` FOREIGN KEY (`user_account_id`) REFERENCES `user_account` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `worker`
+--
+
+LOCK TABLES `worker` WRITE;
+/*!40000 ALTER TABLE `worker` DISABLE KEYS */;
+/*!40000 ALTER TABLE `worker` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -586,4 +742,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-11-20 22:07:11
+-- Dump completed on 2019-12-04 16:18:48
