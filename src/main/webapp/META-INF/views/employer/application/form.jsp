@@ -16,12 +16,12 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
-	<acme:form-textbox code="employer.job.form.label.reference" path="referenceNumber"/>
-	<acme:form-textbox code="employer.job.form.label.title" path="title"/>
-	<acme:form-moment code="employer.job.form.label.deadline" path="deadline"/>
-	<acme:form-money code="employer.job.form.label.salary" path="salary"/>
-	<acme:form-url code="employer.job.form.label.link" path="link"/> 
-	<acme:form-textbox code="employer.job.form.label.description" path="description"/>
+	<acme:form-textbox code="employer.application.form.label.reference" path="referenceNumber"/>
+	<acme:form-textbox code="employer.application.form.label.moment" path="moment"/>
+	<acme:form-moment code="employer.application.form.label.status" path="status"/>
+	<acme:form-money code="employer.application.form.label.statement" path="statement"/>
+	<acme:form-url code="employer.application.form.label.skills" path="skills"/> 
+	<acme:form-textbox code="employer.application.form.label.qualifications" path="qualifications"/>
 		
-  	<acme:form-return code="employer.job.form.button.return"/>
+  	<acme:form-return code="employer.application.form.button.return"/>
 </acme:form>

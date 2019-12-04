@@ -1,5 +1,5 @@
 <%--
-- form.jsp
+- list.jsp
 -
 - Copyright (c) 2019 Rafael Corchuelo.
 -
@@ -15,13 +15,10 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<acme:form>
-	<acme:form-textbox code="employer.job.form.label.reference" path="referenceNumber"/>
-	<acme:form-textbox code="employer.job.form.label.title" path="title"/>
-	<acme:form-moment code="employer.job.form.label.deadline" path="deadline"/>
-	<acme:form-money code="employer.job.form.label.salary" path="salary"/>
-	<acme:form-url code="employer.job.form.label.link" path="link"/> 
-	<acme:form-textbox code="employer.job.form.label.description" path="description"/>
-		
-  	<acme:form-return code="employer.job.form.button.return"/>
-</acme:form>
+<acme:list>
+	<acme:list-column code="employer.job.list.label.reference" path="referenceNumber" width="25%"/>
+	<acme:list-column code="employer.job.list.label.moment" path="moment" width="25%"/>
+	<acme:list-column code="employer.job.list.label.status" path="status" width="50%"/>		
+</acme:list>
+
+
