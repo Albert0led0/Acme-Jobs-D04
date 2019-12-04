@@ -1,0 +1,14 @@
+# i18n_es.messages
+
+authenticated.job.form.label.referenceNumber = Número de referencia:
+authenticated.job.form.label.title = Título:
+authenticated.job.form.label.deadline = Fecha límite:
+authenticated.job.form.label.salary = Salario:
+authenticated.job.form.label.link = Enlace:
+authenticated.job.form.label.description = Descripción:
+
+authenticated.job.form.button.return = Volver
+
+authenticated.job.list.referenceNumber = Número de referencia
+authenticated.job.list.title = Título
+authenticated.job.list.deadline = Fecha límite

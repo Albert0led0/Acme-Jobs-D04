@@ -89,6 +89,12 @@ master.menu.investor-record.list 		= Investors list
 master.menu.investor-record.list-top 	= Top investor records
 master.menu.investor-record.create 		= Create an Investor Record
 
+# master.menu.job ##############################################################
+
+master.menu.job = Jobs
+master.menu.job-mine = Jobs from my audit records
+master.menu.job-not-mine = Jobs from other's audit records
+
 # master.menu.challenge #######################################################
 
 master.menu.challenge 				= Challenges
@@ -148,11 +154,6 @@ master.menu.commercial-banner.list 			= All commercial banners
 master.menu.non-commercial-banner.list 		= All non commercial banners
 master.menu.commercial-banner.create 		= Create a commercial banner
 master.menu.non-commercial-banner.create 	= Create a non commercial banner
-
-# master.menu.audit-record ##############################################################
-master.menu.audit-record = Audit Records
-master.menu.audit-record-mine = My Audit Records
-master.menu.audit-record-not-mine = Other's Audit Records
 
 # master.license ##############################################################
 

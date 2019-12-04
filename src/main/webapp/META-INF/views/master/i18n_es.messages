@@ -89,12 +89,19 @@ master.menu.investor-record.list 		= Listado de registros
 master.menu.investor-record.list-top 	= Mejores registros de inversores
 master.menu.investor-record.create 		= Crear un registro de inversor
 
+# master.menu.job ##############################################################
+
+master.menu.job = Trabajos
+master.menu.job-mine = Trabajos de mis registros de oyente
+master.menu.job-not-mine = Trabajos de los registros de oyente de otros
+
 # master.menu.challenge #######################################################
 
-master.menu.challenge 				= Retos
-master.menu.challenge.list 			= Listado de retos
-master.menu.challenge.list-active 	= Retos activos
-master.menu.challenge.create 		= Nuevo reto
+master.menu.challenge 				= Challenges
+master.menu.challenge.list 			= Challenges list
+master.menu.challenge.list-active 	= Active challenges
+master.menu.challenge.create 		= New challenge
+
 
 ﻿# master.footer ###############################################################
 
@@ -148,10 +155,6 @@ master.menu.non-commercial-banner.list 		= Lista de pancartas no comerciales
 master.menu.commercial-banner.create 		= Crear pancarta comercial
 master.menu.non-commercial-banner.create 	= Crear una pancarta no comercial
 
-# master.menu.audit-record ##############################################################
-master.menu.audit-record = Registro de oyente
-master.menu.audit-record-mine = Mis registros de oyente
-master.menu.audit-record-not-mine = Registros de oyente de otros
 
 # master.license ##############################################################
 
