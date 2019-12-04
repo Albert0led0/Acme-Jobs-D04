@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.thread.authenticated.message;
+package acme.features.authenticated.message;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

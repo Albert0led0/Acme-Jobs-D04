@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.thread.authenticated.message;
+package acme.features.authenticated.message;
 
 import java.util.Collection;
 
@@ -18,7 +18,7 @@ public interface AuthenticatedMessageRepository extends AbstractRepository {
 	@Query("select m from Message m")
 	Collection<Message> findAllMessages();
 
-	@Query("select t from Thread t where t.authenticated.id = ?1")
-	Collection<acme.entities.messages.Thread> findThreadMine(int authenticatedId);
+	@Query("select m from Message m where m.thread.id = ?1")
+	Collection<Message> findMessagesByThread(int threadId);
 
 }

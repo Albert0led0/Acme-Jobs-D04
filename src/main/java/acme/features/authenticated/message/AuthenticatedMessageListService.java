@@ -1,9 +1,7 @@
 
-package acme.features.authenticated.thread.authenticated.message;
+package acme.features.authenticated.message;
 
 import java.util.Collection;
-import java.util.List;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +13,7 @@ import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedMessageListThreadService implements AbstractListService<Authenticated, Message> {
+public class AuthenticatedMessageListService implements AbstractListService<Authenticated, Message> {
 
 	@Autowired
 	AuthenticatedMessageRepository repository;
@@ -43,17 +41,11 @@ public class AuthenticatedMessageListThreadService implements AbstractListServic
 		assert request != null;
 
 		Collection<Message> result;
-		List<acme.entities.messages.Thread> threads;
-		int principal = request.getPrincipal().getActiveRoleId();
+		int id;
 
-		result = this.repository.findAllMessages();
-		threads = result.stream().map(x -> x.getThread()).collect(Collectors.toList());
+		id = request.getModel().getInteger("threadId");
 
-		Collection<acme.entities.messages.Thread> ids = this.repository.findThreadMine(principal);
-
-		List<acme.entities.messages.Thread> threads2 = threads.stream().filter(x -> ids.contains(x)).collect(Collectors.toList());
-
-		result = result.stream().filter(x -> threads2.contains(x.getThread())).collect(Collectors.toList());
+		result = this.repository.findMessagesByThread(id);
 
 		return result;
 	}

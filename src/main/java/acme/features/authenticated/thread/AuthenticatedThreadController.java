@@ -17,15 +17,15 @@ import acme.framework.entities.Authenticated;
 public class AuthenticatedThreadController extends AbstractController<Authenticated, acme.entities.messages.Thread> {
 
 	@Autowired
-	private AuthenticatedThreadListInvolvedService	listActiveService;
+	private AuthenticatedThreadListMineService	listMineService;
 
 	@Autowired
-	private AuthenticatedThreadShowService			showService;
+	private AuthenticatedThreadShowService		showService;
 
 
 	@PostConstruct
 	private void initialise() {
-		super.addCustomCommand(CustomCommand.LIST_INVOLVED, BasicCommand.LIST, this.listActiveService);
+		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listMineService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 
