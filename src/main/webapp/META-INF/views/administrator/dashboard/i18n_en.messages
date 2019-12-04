@@ -1,14 +1,10 @@
 # i18n_en.messages
-#
-# Copyright (c) 2019 Rafael Corchuelo.
-#
-# In keeping with the traditional purpose of furthering education and research, it is
-# the policy of the copyright owner to permit non-commercial use and redistribution of
-# this software. It has been tested carefully, but it is not guaranteed for any particular
-# purposes.  The copyright owner does not offer any warranties or representations, nor do
-# they accept any liabilities with respect to them.
 
 administrator.dashboard.form.title = Dashboard
+
+administrator.dashboard.form.table.title.rewards-active-requests	=	Rewards of the active requests
+administrator.dashboard.form.table.title.min-rewards-active-offers	=	Minimum reward of the active requests
+administrator.dashboard.form.table.title.max-rewards-active-offers	=	Maximum reward of the active requests
 
 administrator.dashboard.form.table.cell.number-announcements		= 	Number of announcements
 administrator.dashboard.form.table.cell.number-companies	 		= 	Number of companies
@@ -19,9 +15,20 @@ administrator.dashboard.form.table.cell.stats.max					=	Maximum
 administrator.dashboard.form.table.cell.stats.avg					=	Average
 administrator.dashboard.form.table.cell.stats.stddev				=	Standard deviation
 
-administrator.dashboard.form.table.title.rewards-active-requests	=	Rewards of the active requests
-administrator.dashboard.form.table.title.min-rewards-active-offers	=	Minimum reward of the active requests
-administrator.dashboard.form.table.title.max-rewards-active-offers	=	Maximum reward of the active requests
+administrator.dashboard.form.table.cell.avg-jobs-employer			=	Average jobs per employer
+administrator.dashboard.form.table.cell.avg-applications-employer	=	Average applications per employer
+administrator.dashboard.form.table.cell.avg-applications-worker		= 	Average applications per worker
 
 administrator.dashboard.form.chart.title.companies-by-sector		=	Number of companies by sector
 administrator.dashboard.form.chart.title.investors-by-sector		=	Number of investors by sector
+
+administrator.dashboard.form.chart.title.jobs-by-status				=	Jobs by status
+administrator.dashboard.form.chart.label.active-jobs				=	Active
+administrator.dashboard.form.chart.label.inactive-jobs				=	Inactive
+
+administrator.dashboard.form.chart.title.applications-by-status		=	Applications by status
+administrator.dashboard.form.chart.label.accepted-applications		=	Accepted
+administrator.dashboard.form.chart.label.pending-applications		=	Pending
+administrator.dashboard.form.chart.label.rejected-applications		=	Rejected
+
+administrator.dashboard.form.chart.scale-label.percentage			=	Percentage

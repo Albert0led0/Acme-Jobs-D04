@@ -55,6 +55,10 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		Double averageMaxRewardActiveOffers = (Double) maxRewardActiveOffersStats.get(0)[2];
 		Double stddevMaxRewardActiveOffers = (Double) maxRewardActiveOffersStats.get(0)[3];
 
+		Double avgJobsPerEmployer = this.repository.avgJobsPerEmployer();
+		Double avgApplicationsPerEmployer = this.repository.avgApplicationsPerEmployer();
+		Double avgApplicationsPerWorker = this.repository.avgApplicationsPerWorker();
+
 		List<Object[]> companiesAndSectors = new ArrayList<Object[]>(this.repository.companiesBySector());
 		List<String> cSectors = new ArrayList<String>();
 		List<Long> companiesBySector = new ArrayList<Long>();
@@ -70,6 +74,15 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 			iSectors.add((String) is[0]);
 			investorsBySector.add((Long) is[1]);
 		}
+
+		List<Object[]> ratioOfJobsByStatus = new ArrayList<Object[]>(this.repository.ratioOfJobsByStatus());
+		Double ratioActiveJobs = 100 * (Double) ratioOfJobsByStatus.get(0)[0];
+		Double ratioInactiveJobs = 100 * (Double) ratioOfJobsByStatus.get(0)[1];
+
+		List<Object[]> ratioOfApplicationsByStatus = new ArrayList<Object[]>(this.repository.ratioOfApplicationsByStatus());
+		Double ratioAcceptedApplications = 100 * (Double) ratioOfApplicationsByStatus.get(0)[0];
+		Double ratioPendingApplications = 100 * (Double) ratioOfApplicationsByStatus.get(0)[1];
+		Double ratioRejectedApplications = 100 * (Double) ratioOfApplicationsByStatus.get(0)[2];
 
 		entity.setNumberOfAnnouncements(numberOfAnnouncements);
 		entity.setNumberOfCompanyRecords(numberOfCompanyRecords);
@@ -90,15 +103,27 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		entity.setAverageMaxRewardActiveOffers(averageMaxRewardActiveOffers);
 		entity.setStddevMaxRewardActiveOffers(stddevMaxRewardActiveOffers);
 
+		entity.setAvgJobsPerEmployer(avgJobsPerEmployer);
+		entity.setAvgApplicationsPerEmployer(avgApplicationsPerEmployer);
+		entity.setAvgApplicationsPerWorker(avgApplicationsPerWorker);
+
 		entity.setCSectors(cSectors);
 		entity.setCompaniesBySector(companiesBySector);
 
 		entity.setISectors(iSectors);
 		entity.setInvestorsBySector(investorsBySector);
 
+		entity.setRatioActiveJobs(ratioActiveJobs);
+		entity.setRatioInactiveJobs(ratioInactiveJobs);
+
+		entity.setRatioAcceptedApplications(ratioAcceptedApplications);
+		entity.setRatioPendingApplications(ratioPendingApplications);
+		entity.setRatioRejectedApplications(ratioRejectedApplications);
+
 		request.unbind(entity, model, "numberOfAnnouncements", "numberOfCompanyRecords", "numberOfInvestorRecords", "minimumRewardActiveRequests", "maximumRewardActiveRequests", "averageRewardActiveRequests", "stddevRewardActiveRequests",
 			"minimumMinRewardActiveOffers", "maximumMinRewardActiveOffers", "averageMinRewardActiveOffers", "stddevMinRewardActiveOffers", "minimumMaxRewardActiveOffers", "maximumMaxRewardActiveOffers", "averageMaxRewardActiveOffers",
-			"stddevMaxRewardActiveOffers", "cSectors", "companiesBySector", "iSectors", "investorsBySector");
+			"stddevMaxRewardActiveOffers", "cSectors", "companiesBySector", "iSectors", "investorsBySector", "avgJobsPerEmployer", "avgApplicationsPerEmployer", "avgApplicationsPerWorker", "ratioActiveJobs", "ratioInactiveJobs",
+			"ratioAcceptedApplications", "ratioPendingApplications", "ratioRejectedApplications");
 
 	}
 

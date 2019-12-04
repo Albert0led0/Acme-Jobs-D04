@@ -35,10 +35,20 @@ public class Dashboard implements Serializable {
 	Double						averageMaxRewardActiveOffers;
 	Double						stddevMaxRewardActiveOffers;
 
+	Double						avgJobsPerEmployer;
+	Double						avgApplicationsPerEmployer;
+	Double						avgApplicationsPerWorker;
+
 	Collection<String>			cSectors;
 	Collection<Long>			companiesBySector;
 
 	Collection<String>			iSectors;
 	Collection<Long>			investorsBySector;
 
+	Double						ratioActiveJobs;
+	Double						ratioInactiveJobs;
+
+	Double						ratioAcceptedApplications;
+	Double						ratioPendingApplications;
+	Double						ratioRejectedApplications;
 }

@@ -1,4 +1,4 @@
-	<%@page language="java"%>
+<%@page language="java"%>
 
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
@@ -16,9 +16,13 @@ div.containerR{
 display: inline-block;
 width: 40%}
 </style>
+
 <h1>
 	<acme:message code="administrator.dashboard.form.title" />
 </h1>
+<br />
+<br />
+
 <table>
 	<tr>
 		<td>
@@ -47,6 +51,7 @@ width: 40%}
 </table>
 <br />
 <br />
+
 <table>
 	<tr>
 		<th colspan="2">
@@ -88,6 +93,7 @@ width: 40%}
 </table>
 <br />
 <br />
+
 <table>
 	<tr>
 		<th colspan="2">
@@ -129,6 +135,7 @@ width: 40%}
 </table>
 <br />
 <br />
+
 <table>
 	<tr>
 		<th colspan="2">
@@ -169,17 +176,60 @@ width: 40%}
 	</tr>
 </table>
 <br />
-<h2></h2>
+<br />
+
+<table>
+	<tr>
+		<td>
+			<acme:message code="administrator.dashboard.form.table.cell.avg-jobs-employer"/>
+		</td>
+		<td>
+			<acme:print value="${ avgJobsPerEmployer}"/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<acme:message code="administrator.dashboard.form.table.cell.avg-applications-employer"/>
+		</td>
+		<td>
+			<acme:print value="${ avgApplicationsPerEmployer}"/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<acme:message code="administrator.dashboard.form.table.cell.avg-applications-worker"/>
+		</td>
+		<td>
+			<acme:print value="${ avgApplicationsPerWorker}"/>
+		</td>
+	</tr>
+</table>
+
+<br />
+<br />
 <div class="containerL">
-	<b><acme:message code="administrator.dashboard.form.chart.title.companies-by-sector"/></b>
+	<h2><b><acme:message code="administrator.dashboard.form.chart.title.companies-by-sector"/></b></h2>
 	<canvas id="chart-area"></canvas>
 </div>
 
 <div class="containerR">
-	<b><acme:message code="administrator.dashboard.form.chart.title.investors-by-sector"/></b>
+	<h2><b><acme:message code="administrator.dashboard.form.chart.title.investors-by-sector"/></b></h2>
 	<canvas id="chart-area2" ></canvas>
 </div>
-	
+
+<br />
+<div class="containerL">
+	<h2><b><acme:message code="administrator.dashboard.form.chart.title.jobs-by-status"/></b></h2>
+	<br />
+	<canvas id="chart-area3"></canvas>
+</div>
+
+<div class="containerR">
+	<h2><b><acme:message code="administrator.dashboard.form.chart.title.applications-by-status"/></b></h2>
+	<br />
+	<canvas id="chart-area4"></canvas>
+</div>
+
 <script type="text/javascript">
 	$(document).ready(function() {
 		var data = {
@@ -282,6 +332,106 @@ width: 40%}
 		context = canvas.getContext("2d");
 		new Chart(context, {
 			type : "pie",
+			data : data,
+			options : options
+		});
+	});
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		var data = {
+			labels : [
+				"<acme:message code='administrator.dashboard.form.chart.label.active-jobs'/>",
+				"<acme:message code='administrator.dashboard.form.chart.label.inactive-jobs'/>"
+			],
+			datasets: [
+				{
+					data: [
+						<jstl:out value="${ratioActiveJobs}"/>,
+						<jstl:out value="${ratioInactiveJobs}"/>
+						],
+				}
+			]
+		};
+		
+		var options = {
+			scales : {
+				yAxes : [
+					{
+						ticks : {
+							suggestedMin : 0.0,
+							suggestedMax : 100.0
+						},
+						scaleLabel: {
+					        display: true,
+					        labelString: '<acme:message code="administrator.dashboard.form.chart.scale-label.percentage"/>'
+					    }
+					}
+				]
+			},
+			legend : {
+				display : false
+			}
+		};
+		
+		var canvas, context;
+		
+		canvas = document.getElementById("chart-area3");
+		context = canvas.getContext("2d");
+		new Chart(context, {
+			type : "bar",
+			data : data,
+			options : options
+		});
+	});
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		var data = {
+			labels : [
+				"<acme:message code='administrator.dashboard.form.chart.label.accepted-applications'/>",
+				"<acme:message code='administrator.dashboard.form.chart.label.pending-applications'/>",
+				"<acme:message code='administrator.dashboard.form.chart.label.rejected-applications'/>"
+			],
+			datasets: [
+				{
+					data: [
+						<jstl:out value="${ratioAcceptedApplications}"/>,
+						<jstl:out value="${ratioPendingApplications}"/>,
+						<jstl:out value="${ratioRejectedApplications}"/>
+						],
+				}
+			]
+		};
+		
+		var options = {
+			scales : {
+				yAxes : [
+					{
+						ticks : {
+							suggestedMin : 0.0,
+							suggestedMax : 100.0
+						},
+						scaleLabel: {
+					        display: true,
+					        labelString: '<acme:message code="administrator.dashboard.form.chart.scale-label.percentage"/>'
+					    }
+					}
+				]
+			},
+			legend : {
+				display : false
+			}
+		};
+		
+		var canvas, context;
+		
+		canvas = document.getElementById("chart-area4");
+		context = canvas.getContext("2d");
+		new Chart(context, {
+			type : "bar",
 			data : data,
 			options : options
 		});
